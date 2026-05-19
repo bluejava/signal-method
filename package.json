@@ -1,0 +1,19 @@
+{
+  "name": "signal-method",
+  "version": "0.3.0",
+  "license": "MIT",
+  "author": "Glenn Crownover",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bluejava/signal-method.git"
+  },
+  "homepage": "https://github.com/bluejava/signal-method#readme",
+  "bugs": {
+    "url": "https://github.com/bluejava/signal-method/issues"
+  },
+  "type": "commonjs",
+  "scripts": {
+    "test": "node scripts/validate-docs.js",
+    "suggest-docs": "node scripts/suggest-doc-updates.js"
+  }
+}
