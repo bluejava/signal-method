@@ -20,6 +20,8 @@ Usually do not split this file. Keep it concise and central.
 ## Canonical System Model
 
 - `system-overview.md`: conceptual model and boundaries.
+- `product-goals.md`: big-picture direction, priorities, non-goals, and success signals.
+- `roadmap.md`: phases, iterations, releases, or milestones and feature candidates.
 - `system-invariants.md`: rules that must always remain true.
 - `architecture.md`: technical structure and component responsibilities.
 - `data-model.md`: shared entities and relationships.

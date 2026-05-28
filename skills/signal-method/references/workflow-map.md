@@ -20,6 +20,16 @@
 6. Use the methodology for all new feature work going forward.
 7. Close or pause migration with clear resume guidance.
 
+## Roadmap Planning
+
+1. Start or resume workflow state for the planning effort.
+2. Read the doc index, active workflow state, product goals, roadmap, and minimum relevant canonical docs.
+3. Create or update `product-goals.md` with current direction, target users, desired outcomes, priorities, non-goals, success signals, and constraints.
+4. Choose the planning horizon and unit: phase, iteration, release, milestone, or another project-specific unit.
+5. Break goals into sequenced slices with outcomes, feature candidates, dependencies, risks, and exit criteria.
+6. Promote selected feature candidates into `feature-specs/`.
+7. Close or pause workflow state with the next planning step or the next `build-feature` handoff.
+
 ## Feature Work
 
 1. Start or resume workflow state for the feature.

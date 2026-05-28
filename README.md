@@ -1,6 +1,6 @@
 # Signal Method
 
-Current methodology version: `0.3.0`
+Current methodology version: `0.4.0`
 
 This repository captures a standalone methodology for building software with AI as a persistent collaborator instead of a stateless chat tool.
 
@@ -13,7 +13,7 @@ The core idea is simple:
 
 The result is a project that behaves more like a durable knowledge system than a pile of source files.
 
-Signal defines its own native workflows for initialization and feature work. External workflow systems can be adapted to Signal, but they are not peers of the core methodology.
+Signal defines its own native workflows for initialization, roadmap planning, and feature work. External workflow systems can be adapted to Signal, but they are not peers of the core methodology.
 
 The repo version is recorded in `package.json`. Projects that adopt the methodology record their local adopted version and docs root in `signal-method.json`.
 
@@ -64,7 +64,7 @@ the portable skill package starts at `skills/signal-method/`.
 - `adapters/compound/`: an optional adapter for projects that already use compound engineering.
 - `skills/signal-method/`: a portable skill for applying the methodology.
 - `doc-index.md`: the map of this repository.
-- `workflows/`: operational playbooks for new projects, migrations, feature work, and methodology upgrades.
+- `workflows/`: operational playbooks for new projects, migrations, roadmap planning, feature work, and methodology upgrades.
 - `migrations/`: sequential guides for upgrading existing Signal-enabled projects.
 - `template-project/`: a starter project scaffold with self-describing templates.
 - `LICENSE`: MIT license terms.
@@ -99,5 +99,6 @@ This methodology overlaps with several existing approaches, but it optimizes for
 - Use `GETTING-STARTED.md` if you want to adopt this in a real project.
 - Use `signal-docs/` as the default folder for Signal-related project files.
 - Copy `template-project/signal-docs/` into a project repo when you are ready to dogfood it.
+- Use `workflows/plan-roadmap.md` when broad goals need to become phases and feature specs before implementation.
 - If a project already has an established `docs/` convention, keep that path only when changing it would add more confusion than value.
 - The installed skill is self-contained and carries its own bundled project template plus an `AGENTS.md` routing snippet.

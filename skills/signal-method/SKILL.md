@@ -20,6 +20,7 @@ For a new project:
    - `signal-docs/system-invariants.md`
    - `signal-docs/architecture.md`
    - `signal-docs/data-model.md`
+   If planning spans multiple features, fill `signal-docs/product-goals.md` and then `signal-docs/roadmap.md`.
 4. Let the bootstrap step add the methodology routing block to `AGENTS.md`.
 5. Add feature specs, ADRs, and compound-memory notes as the project earns them.
 
@@ -60,10 +61,12 @@ When planning work:
 1. Read `signal-docs/doc-index.md` or the project's configured canonical docs root.
 2. Read active workflow state if present.
 3. Read `signal-docs/system-overview.md` or the equivalent root path.
-4. Read `signal-docs/system-invariants.md` or the equivalent root path.
-5. Read only the canonical docs relevant to the task.
-6. Read only the ADRs and compound-memory notes relevant to the task.
-7. Update or create the feature spec before implementation.
+4. Read `signal-docs/product-goals.md` and `signal-docs/roadmap.md` if the task involves big-picture planning, sequencing, phases, iterations, releases, or feature selection.
+5. Read `signal-docs/system-invariants.md` or the equivalent root path.
+6. Read only the canonical docs relevant to the task.
+7. Read only the ADRs and compound-memory notes relevant to the task.
+8. Use roadmap planning before feature work when goals need to be broken into phases or feature candidates.
+9. Update or create the feature spec before implementation.
 
 When reviewing work:
 
@@ -91,6 +94,6 @@ Do not maintain a competing state machine. Map external phases into Signal workf
 
 - `scripts/bootstrap-project.js`: copy the bundled methodology starter files into a target repository and manage the `AGENTS.md` routing block.
 - `references/methodology-map.md`: compact summary of the artifact model and design rules.
-- `references/workflow-map.md`: concise operational playbook for setup, migration, feature work, workflow state, and optional adapters.
+- `references/workflow-map.md`: concise operational playbook for setup, migration, roadmap planning, feature work, workflow state, and optional adapters.
 - `migrations/`: sequential methodology upgrade guides.
 - `assets/template-project/`: bundled template used by the bootstrap script.

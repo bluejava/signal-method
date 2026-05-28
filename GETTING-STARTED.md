@@ -9,7 +9,8 @@ Read these files in order:
 1. `README.md`
 2. `METHODOLOGY.md`
 3. `artifact-taxonomy.md`
-4. `workflows/build-feature.md`
+4. `workflows/plan-roadmap.md`
+5. `workflows/build-feature.md`
 
 That gives you the philosophy, artifact definitions, and native feature workflow.
 
@@ -30,6 +31,8 @@ Start with these files under your canonical docs root. New projects should defau
 
 Then add:
 
+- `signal-docs/product-goals.md` when big-picture planning should persist
+- `signal-docs/roadmap.md` when goals need phases, iterations, releases, or milestones
 - `signal-docs/api.md` if interfaces matter early
 - `signal-docs/design/design-guidelines.md` if product consistency matters early
 - `signal-docs/feature-specs/` once feature work begins
@@ -41,6 +44,16 @@ Keep this file at the project root:
 - `signal-method.json` as the adopted methodology version and docs root record
 
 ### 3. Make The Workflow Real
+
+When broad goals need to become buildable work:
+
+1. start or resume workflow state
+2. establish context from the doc index and relevant docs
+3. update product goals
+4. break goals into phases, iterations, releases, or milestones in the roadmap
+5. identify feature candidates
+6. promote selected features into feature specs
+7. hand the next feature to `workflows/build-feature.md`
 
 For each meaningful feature:
 
@@ -67,7 +80,8 @@ For each meaningful feature:
 5. Define the first shared entities in `data-model.md`.
 6. Add `doc-index.md`.
 7. Update `workflow-state/current.md`.
-8. Begin feature work with `feature-specs/`.
+8. Add `product-goals.md` and `roadmap.md` when planning needs to span more than one feature.
+9. Begin feature work with `feature-specs/`.
 
 ### Existing Project
 

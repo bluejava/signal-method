@@ -5,6 +5,7 @@ This repository uses the `$signal-method` skill and dogfoods the methodology it 
 Use the skill for:
 
 - methodology source changes
+- roadmap planning
 - feature planning
 - workflow-state updates
 - project documentation creation or updates

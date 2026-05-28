@@ -13,6 +13,12 @@ Start with:
 
 Then add or expand the rest as the project earns them.
 
+For broader planning, add:
+
+1. `product-goals.md`
+2. `roadmap.md`
+3. `feature-specs/`
+
 Use these documents to preserve:
 
 - current system truth

@@ -5,6 +5,7 @@ This project uses the `$signal-method` skill.
 Use it for:
 
 - project setup and migration
+- roadmap planning
 - feature planning
 - workflow-state updates
 - project documentation creation or updates

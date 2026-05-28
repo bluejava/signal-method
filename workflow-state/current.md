@@ -24,40 +24,25 @@ Split when
 Use one workflow state file per active feature or migration when multiple workflows are active at the same time.
 
 Status: Complete
-Workflow: publication cleanup
+Workflow: roadmap planning workflow addition
 Current step: Closed
-Last updated: 2026-05-19
+Last updated: 2026-05-28
 
 ## Goal
 
-Remove vestigial pre-publication artifacts from the Signal Method repo so the repository map only describes current source, templates, workflows, migrations, and the distributable skill.
+Extend Signal Method so it can guide big-picture planning from product goals into phases, iterations, releases, or milestones, then into feature specs that enter the build-feature workflow.
 
 ## Completed
 
-- Removed `"private": true` from `package.json`.
-- Added `license: "MIT"` and `author: "Glenn Crownover"` to `package.json`.
-- Added root `LICENSE` with MIT terms.
-- Added the license to `README.md` and `doc-index.md`.
-- Removed `archive/chatgpt-import-v1/`, which only contained the original generated scaffold and an older `template-project/docs` layout.
-- Removed stray `.DS_Store` files from the repo root, `adapters/`, `template-project/`, and the bundled skill template.
-- Removed stale publication-facing references to `archive/chatgpt-import-v1/` and missing `chat.pdf` from `README.md` and `doc-index.md`.
-- Confirmed the validation allowlist does not depend on the removed archive tree.
-- Added `.npmignore` so package dry-runs exclude local Yarn PnP runtime files.
+- Added `workflows/plan-roadmap.md` as a native planning workflow.
+- Added `product-goals.md` and `roadmap.md` template artifacts to the root template project.
+- Mirrored the new planning artifacts into the bundled installable skill template.
+- Added `migrations/0.3.0-to-0.4.0.md` and the matching bundled skill migration.
+- Updated methodology, taxonomy, getting-started, README, doc index, skill guidance, workflow map, methodology map, template guidance, and agent guidance to include roadmap planning.
+- Bumped the methodology version from `0.3.0` to `0.4.0`.
+- Updated validation coverage for the new workflow, migration, and template artifacts.
 - Ran `yarn test`.
 - Ran `npm pack --dry-run`.
-- Confirmed the bundled installable skill lives at `skills/signal-method/`; GitHub-based skill installers should be pointed at that path, not the repository root.
-- Re-ran `yarn test` and `npm pack --dry-run` during the final publish-readiness check.
-- Added README install instructions for agent harnesses, including the GitHub skill path `skills/signal-method/`.
-- Clarified `signal-docs/` as the default Signal docs folder and `docs/` as an existing-convention fallback.
-- Removed the compound adapter from README Starting Points so it reads as optional compatibility, not a core adoption step.
-- Ran `yarn test` after the README and getting-started updates.
-- Replaced placeholder install commands with the planned GitHub repo `bluejava/signal-method`.
-- Added skills.sh-compatible install commands to `README.md`.
-- Added package repository, homepage, and bugs metadata for `https://github.com/bluejava/signal-method`.
-- Re-ran `yarn test` and `npm pack --dry-run`.
-- Initialized the local Git repository on branch `main`.
-- Added `.yarn/install-state.gz` to `.gitignore` so generated Yarn state is not committed.
-- Created the initial commit.
 
 ## Current Step
 
@@ -65,25 +50,27 @@ No active step.
 
 ## Next Step
 
-Create or connect the GitHub remote at `https://github.com/bluejava/signal-method`, then push branch `main`. For skill installation, point agent harnesses at `skills/signal-method/`.
+Use `workflows/plan-roadmap.md` in a real project planning pass, then refine the workflow if the handoff into `workflows/build-feature.md` is unclear.
 
 ## Open Questions
 
-- Whether package publication should also add registry-facing metadata such as repository, homepage, bugs, keywords, files, or publishConfig.
-- Whether this repo should publish the whole repo tarball or narrow package contents with a `files` allowlist.
+- Whether future versions should add a richer feature-spec template for roadmap-originated features.
+- Whether roadmap planning should later support multiple parallel roadmap files by default, or keep that as a split-when-needed convention.
 
 ## Relevant Artifacts
 
-- `signal-method.json`
-- `AGENTS.md`
-- `README.md`
-- `LICENSE`
-- `doc-index.md`
-- `package.json`
-- `skills/signal-method/`
-- `template-project/signal-method.json`
+- `workflows/plan-roadmap.md`
+- `workflows/build-feature.md`
+- `product-goals.md` template files
+- `roadmap.md` template files
+- `migrations/0.3.0-to-0.4.0.md`
+- `skills/signal-method/SKILL.md`
+- `skills/signal-method/references/workflow-map.md`
+- `skills/signal-method/references/methodology-map.md`
+- `template-project/signal-docs/`
+- `scripts/validate-docs.js`
 - `workflow-state/current.md`
 
 ## Resume Instructions
 
-Open future sessions at `/Users/glenn/work/vibe/signal-method`. Read `doc-index.md`, then this file. If continuing publication readiness, create or connect the GitHub remote before pushing branch `main`, and point skill installers at `skills/signal-method/`.
+Open future sessions at `/Users/glenn/work/vibe/signal-method`. Read `doc-index.md`, then this file. If continuing this planning-workflow addition, start by applying `workflows/plan-roadmap.md` to a real project and check whether the resulting roadmap produces feature specs that are ready for `workflows/build-feature.md`.

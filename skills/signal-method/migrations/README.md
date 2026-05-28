@@ -15,3 +15,9 @@ This directory contains sequential migration guides for upgrading Signal-enabled
 - Patch versions clarify wording or fix errors and usually do not require migrations.
 - Minor versions may add artifacts, workflow steps, or guidance and should include a migration guide when existing projects need updates.
 - Major versions may change artifact semantics or workflow contracts and should include explicit migration guidance.
+
+## Available Migrations
+
+- `0.1.0-to-0.2.0.md`: add workflow state and version metadata.
+- `0.2.0-to-0.3.0.md`: rename Signal Methodology to Signal Method.
+- `0.3.0-to-0.4.0.md`: add roadmap planning artifacts and workflow guidance.

@@ -89,6 +89,68 @@ Must not contain:
 Split when:
 Invariants cluster into clearly separate domains with different retrieval patterns.
 
+## `product-goals.md`
+
+Purpose:
+Capture the current big-picture product direction that should guide roadmap and feature planning.
+
+When consulted:
+
+- big-picture planning
+- prioritizing roadmap phases
+- scoping feature candidates
+- deciding whether a request fits the current product direction
+
+Must contain:
+
+- target users or stakeholders
+- desired outcomes
+- current priorities
+- non-goals
+- success signals
+- planning constraints
+
+Must not contain:
+
+- phase-by-phase sequencing
+- detailed feature behavior
+- historical rationale
+- active workflow progress
+
+Split when:
+Multiple product areas have independent planning cycles, audiences, or success criteria.
+
+## `roadmap.md`
+
+Purpose:
+Break product goals into sequenced phases, iterations, releases, or milestones and identify feature candidates for build-feature workflows.
+
+When consulted:
+
+- planning multi-feature work
+- choosing the next feature to specify
+- sequencing releases or iterations
+- checking whether feature specs still match the broader plan
+
+Must contain:
+
+- planning horizon and planning unit
+- phase goals and outcomes
+- feature candidates
+- dependencies
+- risks and open questions
+- links to feature specs
+
+Must not contain:
+
+- detailed feature behavior
+- code-level implementation plans
+- decision rationale that belongs in ADRs
+- chat-style progress logs
+
+Split when:
+Independent product areas need separate roadmaps with different audiences, cadences, or release boundaries.
+
 ## `architecture.md`
 
 Purpose:

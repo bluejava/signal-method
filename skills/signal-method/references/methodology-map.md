@@ -34,6 +34,8 @@
 
 - `signal-docs/doc-index.md`
 - `signal-docs/system-overview.md`
+- `signal-docs/product-goals.md`
+- `signal-docs/roadmap.md`
 - `signal-docs/system-invariants.md`
 - `signal-docs/architecture.md`
 - `signal-docs/data-model.md`

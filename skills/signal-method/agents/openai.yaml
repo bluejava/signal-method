@@ -1,4 +1,4 @@
 interface:
   display_name: "Signal Method"
-  short_description: "Set up and maintain Signal Method project docs"
+  short_description: "Plan, set up, and maintain Signal Method project docs"
   default_prompt: "Apply the Signal Method to this project."

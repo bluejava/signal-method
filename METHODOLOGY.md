@@ -19,6 +19,8 @@ These artifacts describe the current truth of the product.
 Examples:
 
 - `system-overview.md`
+- `product-goals.md`
+- `roadmap.md`
 - `system-invariants.md`
 - `architecture.md`
 - `data-model.md`
@@ -58,6 +60,7 @@ Signal uses workflows to keep project memory current while work happens. The cor
 
 - greenfield initialization
 - brownfield migration
+- roadmap planning
 - feature work
 - methodology upgrade
 
@@ -69,6 +72,12 @@ Each workflow has two layers:
 The playbook tells humans and agents what the path is. The workflow state tells a future session where to resume.
 
 At the end of every meaningful workflow step, the agent should update workflow state and tell the user the next step. This makes the process durable across chat sessions instead of relying on conversation memory.
+
+### Planning From Goals To Features
+
+Signal supports big-picture planning as a first-class workflow. Product direction belongs in `product-goals.md`. Sequencing across phases, iterations, releases, or milestones belongs in `roadmap.md`. Buildable behavior belongs in `feature-specs/`.
+
+The roadmap planning workflow turns broad goals into delivery slices, then promotes selected slices into feature specs that can enter the build-feature workflow. This keeps strategy, sequencing, and implementation detail at different retrieval boundaries without forcing teams into one release vocabulary.
 
 ### User Outcomes And Agent Actions
 

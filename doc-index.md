@@ -18,6 +18,7 @@ This file is the entry point to the repository.
 - `migrations/README.md`: rules for methodology version migrations.
 - `migrations/0.1.0-to-0.2.0.md`: migration guide for adding workflow state and version metadata.
 - `migrations/0.2.0-to-0.3.0.md`: migration guide for the breaking rename from Signal Methodology to Signal Method.
+- `migrations/0.3.0-to-0.4.0.md`: migration guide for roadmap planning artifacts and workflow guidance.
 - `compound-workflow.md`: legacy compatibility notes for compound-style workflows.
 - `adapters/compound/README.md`: optional adapter guidance for existing compound engineering projects.
 - `skills/signal-method/SKILL.md`: portable skill instructions for applying the methodology in a repo.
@@ -28,6 +29,7 @@ This file is the entry point to the repository.
 
 - `workflows/new-project.md`: starting from zero.
 - `workflows/migrate-existing-project.md`: adding the system to an existing product.
+- `workflows/plan-roadmap.md`: turning product goals into phases and feature specs.
 - `workflows/build-feature.md`: doing feature work inside the system.
 - `workflows/upgrade-methodology.md`: upgrading an adopted project to a newer Signal methodology version.
 
@@ -37,6 +39,8 @@ This file is the entry point to the repository.
 - `template-project/signal-method.json`: adopted methodology version and docs root metadata.
 - `template-project/signal-docs/doc-index.md`: entry point for the project-level documentation graph.
 - `template-project/signal-docs/system-overview.md`: conceptual system model.
+- `template-project/signal-docs/product-goals.md`: product direction and planning constraints.
+- `template-project/signal-docs/roadmap.md`: phases, iterations, releases, or milestones with feature candidates.
 - `template-project/signal-docs/system-invariants.md`: rules that must always remain true.
 - `template-project/signal-docs/architecture.md`: technical structure.
 - `template-project/signal-docs/data-model.md`: shared entities and relationships.
