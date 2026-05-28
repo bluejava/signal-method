@@ -113,11 +113,12 @@ When this methodology changes, use `workflows/upgrade-methodology.md`.
 The short version:
 
 1. read `signal-method.json`
-2. apply each required migration in `migrations/` in order
-3. preserve project-specific docs
-4. validate the docs
-5. update `signal-method.json`
-6. record the upgrade in workflow state
+2. read the installed skill's `version` frontmatter as the target version
+3. apply each required migration in `migrations/` in order
+4. preserve project-specific docs
+5. validate the docs
+6. update `signal-method.json`
+7. record the upgrade in workflow state
 
 ## First Dogfooding Goal
 

@@ -89,9 +89,9 @@ This distinction keeps the workflow useful for humans without pretending the use
 
 ## Methodology Versions And Migrations
 
-Signal-enabled projects should record their adopted methodology version and docs root in `signal-method.json` at the project root.
+Signal-enabled projects should record their adopted methodology version and docs root in `signal-method.json` at the project root. Installed skills should expose their target methodology version in `SKILL.md` frontmatter.
 
-Methodology changes that require existing projects to change should ship with sequential migration guides under `migrations/`. Agents should apply migrations in order from the recorded project version to the target methodology version.
+Methodology changes that require existing projects to change should ship with sequential migration guides under `migrations/`. Agents should apply migrations in order from the recorded project version to the installed skill's target methodology version.
 
 Templates are for new projects. Migrations are for existing projects. During an upgrade, agents should preserve project-specific canonical truth and use templates only when a migration explicitly says to add a new file or guidance block.
 

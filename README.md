@@ -15,7 +15,7 @@ The result is a project that behaves more like a durable knowledge system than a
 
 Signal defines its own native workflows for initialization, roadmap planning, and feature work. External workflow systems can be adapted to Signal, but they are not peers of the core methodology.
 
-The repo version is recorded in `package.json`. Projects that adopt the methodology record their local adopted version and docs root in `signal-method.json`.
+The repo version is recorded in `package.json`. The installable skill exposes its target methodology version in `skills/signal-method/SKILL.md` frontmatter. Projects that adopt the methodology record their local adopted version and docs root in `signal-method.json`.
 
 License: MIT.
 

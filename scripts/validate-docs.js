@@ -129,6 +129,27 @@ function readFile(relativePath) {
 }
 
 /**
+ * Read and parse a JSON file.
+ *
+ * @param {string} relativePath
+ * @returns {object}
+ */
+function readJson(relativePath) {
+  return JSON.parse(readFile(relativePath));
+}
+
+/**
+ * Extract the skill version from SKILL.md frontmatter.
+ *
+ * @returns {string | null}
+ */
+function readSkillVersion() {
+  const skill = readFile("skills/signal-method/SKILL.md");
+  const match = skill.match(/^version:\s*["']?([^"'\n]+)["']?$/m);
+  return match ? match[1] : null;
+}
+
+/**
  * Return the required template guardrail headings.
  *
  * @returns {string[]}
@@ -163,6 +184,31 @@ function validateTemplateHeadings() {
 }
 
 /**
+ * Validate that all version discovery surfaces agree.
+ *
+ * @returns {string[]}
+ */
+function validateVersionMetadata() {
+  const expectedVersion = readJson("package.json").version;
+  const versionSources = [
+    ["signal-method.json", readJson("signal-method.json").version],
+    ["template-project/signal-method.json", readJson("template-project/signal-method.json").version],
+    [
+      "skills/signal-method/assets/template-project/signal-method.json",
+      readJson("skills/signal-method/assets/template-project/signal-method.json").version
+    ],
+    ["skills/signal-method/SKILL.md", readSkillVersion()]
+  ];
+
+  return versionSources
+    .filter(([, version]) => version !== expectedVersion)
+    .map(
+      ([relativePath, version]) =>
+        `Version mismatch in ${relativePath}: expected ${expectedVersion}, found ${version || "missing"}`
+    );
+}
+
+/**
  * Run all repo validations and return any failures.
  *
  * @returns {string[]}
@@ -170,7 +216,8 @@ function validateTemplateHeadings() {
 function runValidation() {
   return []
     .concat(validateRequiredFiles())
-    .concat(validateTemplateHeadings());
+    .concat(validateTemplateHeadings())
+    .concat(validateVersionMetadata());
 }
 
 const failures = runValidation();

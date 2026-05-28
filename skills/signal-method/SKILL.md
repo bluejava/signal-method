@@ -1,5 +1,6 @@
 ---
 name: signal-method
+version: "0.4.0"
 description: Bootstrap, upgrade, and maintain project documentation using the Signal Method with canonical docs, workflow state, version metadata, ADRs, and compound memory. Use when setting up this methodology in a new repo, migrating an existing repo, upgrading methodology files, planning or reviewing feature work, or mapping an external workflow into Signal artifacts.
 ---
 
@@ -35,10 +36,11 @@ For an existing project:
 For a methodology upgrade:
 
 1. Read `signal-method.json` from the project root.
-2. Read `references/workflow-map.md`.
-3. Apply each required migration guide from `migrations/` in order.
-4. Preserve project-specific canonical docs unless a migration explicitly requires an edit.
-5. Update `signal-method.json` only after the migration completes.
+2. Read this skill's `version` frontmatter as the target methodology version.
+3. Read `references/workflow-map.md`.
+4. Apply each required migration guide from `migrations/` in order.
+5. Preserve project-specific canonical docs unless a migration explicitly requires an edit.
+6. Update `signal-method.json` only after the migration completes.
 
 ## Core Rules
 

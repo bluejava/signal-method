@@ -15,6 +15,7 @@
 - Put workflow behavior in agent guidance and workflow playbooks.
 - Put active or paused workflow progress in workflow state.
 - Put adopted methodology version metadata and docs-root discovery in root `signal-method.json`.
+- Put installed skill target version metadata in `SKILL.md` frontmatter.
 
 ## Partitioning Rules
 

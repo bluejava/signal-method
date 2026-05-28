@@ -44,7 +44,7 @@
 ## Methodology Upgrade
 
 1. Read `signal-method.json` from the project root.
-2. Identify the target methodology version.
+2. Read the skill `version` frontmatter as the target methodology version.
 3. Apply each required migration guide from `migrations/` in order.
 4. Preserve project-specific canonical docs unless a migration explicitly requires an edit.
 5. Validate the upgraded docs.
