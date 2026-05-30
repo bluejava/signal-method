@@ -9,10 +9,11 @@ Read these files in order:
 1. `README.md`
 2. `METHODOLOGY.md`
 3. `artifact-taxonomy.md`
-4. `workflows/plan-roadmap.md`
-5. `workflows/build-feature.md`
+4. `workflows/choose-workflow.md`
+5. `workflows/plan-roadmap.md`
+6. `workflows/build-feature.md`
 
-That gives you the philosophy, artifact definitions, and native feature workflow.
+That gives you the philosophy, artifact definitions, workflow routing, and native feature workflow.
 
 You do not need compound engineering to adopt this repository. Signal workflows stand on their own.
 
@@ -44,6 +45,13 @@ Keep this file at the project root:
 - `signal-method.json` as the adopted methodology version and docs root record
 
 ### 3. Make The Workflow Real
+
+When you are unsure which workflow applies:
+
+1. read `workflows/choose-workflow.md`
+2. classify the request as setup, migration, roadmap planning, feature work, methodology upgrade, review, or adapter compatibility
+3. start or resume the workflow state for the selected route
+4. read only the artifacts named by that route
 
 When broad goals need to become buildable work:
 

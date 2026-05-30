@@ -1,12 +1,18 @@
 ---
 name: signal-method
-version: "0.4.0"
+version: "0.4.1"
 description: Bootstrap, upgrade, and maintain project documentation using the Signal Method with canonical docs, workflow state, version metadata, ADRs, and compound memory. Use when setting up this methodology in a new repo, migrating an existing repo, upgrading methodology files, planning or reviewing feature work, or mapping an external workflow into Signal artifacts.
 ---
 
 # Signal Method
 
 Use this skill to apply the repository's documentation methodology inside a real project.
+
+## Workflow Selection
+
+When the user's request does not clearly identify which Signal workflow should run, read `references/workflow-chooser.md` before planning or editing.
+
+Use the chooser to route the task into greenfield initialization, brownfield migration, roadmap planning, feature work, methodology upgrade, review and drift detection, or an optional external workflow adapter.
 
 ## Quick Start
 
@@ -27,7 +33,7 @@ For a new project:
 
 For an existing project:
 
-1. Read `references/workflow-map.md`.
+1. Read `references/workflow-chooser.md` if the route is unclear, then read `references/workflow-map.md`.
 2. Bootstrap the docs into the target repo if they do not exist yet.
 3. Document the current system first, not the historical dream.
 4. Create or update workflow state so migration status survives across sessions.
@@ -96,6 +102,7 @@ Do not maintain a competing state machine. Map external phases into Signal workf
 
 - `scripts/bootstrap-project.js`: copy the bundled methodology starter files into a target repository and manage the `AGENTS.md` routing block.
 - `references/methodology-map.md`: compact summary of the artifact model and design rules.
+- `references/workflow-chooser.md`: routing guide for selecting the correct Signal workflow or adapter path.
 - `references/workflow-map.md`: concise operational playbook for setup, migration, roadmap planning, feature work, workflow state, and optional adapters.
 - `migrations/`: sequential methodology upgrade guides.
 - `assets/template-project/`: bundled template used by the bootstrap script.

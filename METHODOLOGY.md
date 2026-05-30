@@ -64,6 +64,8 @@ Signal uses workflows to keep project memory current while work happens. The cor
 - feature work
 - methodology upgrade
 
+When the correct workflow is not obvious, use the workflow chooser first. The chooser is a routing artifact, not a workflow state machine. It selects the right playbook and first artifacts to read before deeper planning or editing begins.
+
 Each workflow has two layers:
 
 - a stable playbook that defines the expected process

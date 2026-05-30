@@ -5,6 +5,7 @@ This file is the entry point to the repository.
 ## Orientation
 
 - `README.md`: short overview and repo map.
+- `signal-method.html`: standalone half-marketing, half-documentation overview of the methodology, advantages, workflows, and improvement opportunities.
 - `METHODOLOGY.md`: conceptual model and design principles.
 - `GETTING-STARTED.md`: practical adoption path.
 - `signal-method.json`: adopted methodology version and docs root metadata for this repository.
@@ -15,6 +16,9 @@ This file is the entry point to the repository.
 ## Reference
 
 - `artifact-taxonomy.md`: formal rules for each artifact type.
+- `feature-specs/signal-method-overview-page.md`: feature intent for the standalone overview page.
+- `feature-specs/version-0.4.1.md`: patch release scope and no-migration decision for version 0.4.1.
+- `feature-specs/workflow-chooser.md`: feature intent for the workflow chooser routing artifact.
 - `migrations/README.md`: rules for methodology version migrations.
 - `migrations/0.1.0-to-0.2.0.md`: migration guide for adding workflow state and version metadata.
 - `migrations/0.2.0-to-0.3.0.md`: migration guide for the breaking rename from Signal Methodology to Signal Method.
@@ -22,11 +26,13 @@ This file is the entry point to the repository.
 - `compound-workflow.md`: legacy compatibility notes for compound-style workflows.
 - `adapters/compound/README.md`: optional adapter guidance for existing compound engineering projects.
 - `skills/signal-method/SKILL.md`: portable skill instructions for applying the methodology in a repo.
+- `skills/signal-method/references/workflow-chooser.md`: portable workflow routing guide for installed agents.
 - `skills/signal-method/assets/template-project/`: bundled template used by the installed skill bootstrap.
 - `doc-index.md`: this map.
 
 ## Operational Playbooks
 
+- `workflows/choose-workflow.md`: routing guide for selecting the correct Signal workflow before planning, editing, reviewing, or upgrading.
 - `workflows/new-project.md`: starting from zero.
 - `workflows/migrate-existing-project.md`: adding the system to an existing product.
 - `workflows/plan-roadmap.md`: turning product goals into phases and feature specs.

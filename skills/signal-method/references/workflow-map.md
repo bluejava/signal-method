@@ -1,5 +1,17 @@
 # Workflow Map
 
+If the task route is unclear, read `workflow-chooser.md` before using this map.
+
+## Workflow Selection
+
+- Use greenfield initialization for a new project or mostly empty repository.
+- Use brownfield migration for an existing codebase or product.
+- Use roadmap planning for broad goals, sequencing, phases, releases, milestones, or feature candidates.
+- Use feature work for implementing, modifying, or removing behavior.
+- Use methodology upgrade for moving an adopted project between Signal Method versions.
+- Use the feature-work review path for drift detection until review becomes a standalone native workflow.
+- Use external workflow adapters only when the project already uses them or explicitly requests compatibility.
+
 ## Greenfield Initialization
 
 1. Create or update workflow state for the initialization.
