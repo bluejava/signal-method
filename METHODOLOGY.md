@@ -69,11 +69,13 @@ When the correct workflow is not obvious, use the workflow chooser first. The ch
 Each workflow has two layers:
 
 - a stable playbook that defines the expected process
-- an active workflow state file that records where the current run stands
+- a workflow-state index plus sibling state files that record where current runs stand
 
-The playbook tells humans and agents what the path is. The workflow state tells a future session where to resume.
+The playbook tells humans and agents what the path is. The workflow-state index and sibling state file tell a future session where to resume.
 
-At the end of every meaningful workflow step, the agent should update workflow state and tell the user the next step. This makes the process durable across chat sessions instead of relying on conversation memory.
+`workflow-state/current.md` is always the stable entry point and always acts as a workflow-state index. Detailed workflow progress lives in sibling files under `workflow-state/`, even when only one workflow is active.
+
+At the end of every meaningful workflow step, the agent should update the sibling workflow state file, update the workflow-state index, and tell the user the next step. This makes the process durable across chat sessions instead of relying on conversation memory.
 
 ### Planning From Goals To Features
 
@@ -85,7 +87,7 @@ The roadmap planning workflow turns broad goals into delivery slices, then promo
 
 Workflow steps should distinguish between user-visible outcomes and agent operations.
 
-For example, "establish context" is a user-visible outcome: the user should know the agent has loaded the right constraints before planning or editing. The agent operations are more specific: read the documentation index, read active workflow state, and load only the relevant canonical docs, feature specs, ADRs, and compound-memory notes.
+For example, "establish context" is a user-visible outcome: the user should know the agent has loaded the right constraints before planning or editing. The agent operations are more specific: read the documentation index, read `workflow-state/current.md`, read the relevant sibling workflow state file, and load only the relevant canonical docs, feature specs, ADRs, and compound-memory notes.
 
 This distinction keeps the workflow useful for humans without pretending the user must manually perform every context-loading action.
 

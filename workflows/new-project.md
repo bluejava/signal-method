@@ -12,7 +12,7 @@ Each step has a user outcome and agent actions. The user outcome is what should 
 
 1. Classify the project as greenfield.
    - User outcome: everyone knows this is a new project setup, not a migration.
-   - Agent actions: create or update `workflow-state/current.md` with workflow type, goal, current step, and resume instructions.
+   - Agent actions: create or update a sibling workflow state file for initialization, update `workflow-state/current.md` with an index entry for it, and record workflow type, goal, current step, and resume instructions.
 2. Choose the canonical docs root.
    - User outcome: the project has one obvious place for Signal docs.
    - Agent actions: default to `signal-docs/` unless the project has a strong existing `docs/` convention.
@@ -39,7 +39,7 @@ Each step has a user outcome and agent actions. The user outcome is what should 
    - Agent actions: list the active docs and add navigation hints for future sessions.
 10. Close initialization.
    - User outcome: the project is ready for its first feature workflow.
-   - Agent actions: update workflow state with completed steps, next recommended workflow, and resume instructions.
+   - Agent actions: update the initialization state file with completed steps, next recommended workflow, and resume instructions, then update `workflow-state/current.md`.
 
 ## Rules
 
@@ -47,7 +47,7 @@ Each step has a user outcome and agent actions. The user outcome is what should 
 - Favor stable system truths over implementation detail.
 - Do not create specialized artifact types until a durable retrieval need appears.
 - Add ADRs as soon as the project makes meaningful architectural choices.
-- Update workflow state at the end of every meaningful step.
+- Update the sibling workflow state file and `workflow-state/current.md` at the end of every meaningful step.
 
 ## Exit Criteria
 
@@ -56,4 +56,4 @@ You are ready to build against the system when:
 - a new contributor can understand the product from the docs
 - an AI can load the docs and avoid obvious architectural confusion
 - the first feature can be specified without inventing new structure under pressure
-- `workflow-state/current.md` explains what was completed and what should happen next
+- `workflow-state/current.md` indexes the initialization state file and names what should happen next

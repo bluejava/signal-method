@@ -12,10 +12,10 @@ Each step has a user outcome and agent actions. The user outcome is what should 
 
 1. Start or resume the planning workflow.
    - User outcome: the planning goal, status, and next step are explicit.
-   - Agent actions: create or update workflow state for the planning effort and read any existing resume instructions.
+   - Agent actions: create or update a sibling workflow state file for the planning effort, update `workflow-state/current.md` with an index entry for it, and read any existing resume instructions.
 2. Establish context.
    - User outcome: planning starts from the current project truth.
-   - Agent actions: read `signal-docs/doc-index.md` or the configured docs root, the active workflow state, and the relevant canonical docs, ADRs, feature specs, and compound-memory notes.
+   - Agent actions: read `signal-docs/doc-index.md` or the configured docs root, `workflow-state/current.md`, the planning sibling state file, and the relevant canonical docs, ADRs, feature specs, and compound-memory notes.
 3. Capture or update product goals.
    - User outcome: the big-picture intent and success criteria are durable outside chat history.
    - Agent actions: create or update `product-goals.md` with target users, desired outcomes, non-goals, constraints, and success signals.
@@ -39,7 +39,7 @@ Each step has a user outcome and agent actions. The user outcome is what should 
    - Agent actions: update `doc-index.md`, product goals, roadmap, feature specs, ADRs, and canonical docs as needed.
 10. Close or pause the workflow.
    - User outcome: a future session can resume planning or begin feature work without reconstructing context.
-   - Agent actions: update workflow state with completed steps, current plan status, blockers, relevant artifacts, and resume instructions.
+   - Agent actions: update the planning workflow state with completed steps, current plan status, blockers, relevant artifacts, and resume instructions, then update its `workflow-state/current.md` index entry.
 
 ## Required Questions
 

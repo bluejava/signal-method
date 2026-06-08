@@ -1,17 +1,15 @@
-# Current Workflow State
+# Current Workflow State - Workflow Index
 
 Purpose
-Track the active or most recent Signal workflow so a future session can resume without relying on chat history.
+Route to active Signal workflow state files so a future session can resume without relying on chat history. This file is always an index; detailed workflow progress lives in sibling files in this folder.
 
 Include
 
-- workflow status
-- current step
-- next step
-- completed work
-- blockers or open questions
-- relevant artifacts
-- resume instructions
+- active workflow list
+- links to sibling workflow state files
+- short status and next step for each workflow
+- cross-workflow blockers or coordination notes
+- recently closed workflows when useful for handoff
 
 Exclude
 
@@ -19,34 +17,35 @@ Exclude
 - canonical system truth
 - historical rationale
 - reusable implementation lessons
+- detailed per-workflow progress
 
 Split when
-Use one workflow state file per active feature or migration when multiple workflows are active at the same time.
+Create one sibling workflow state file per active feature, planning effort, upgrade, or migration, even when only one workflow is active.
 
 Status: Not started
-Workflow: None
-Current step: None
 Last updated: YYYY-MM-DD
 
-## Goal
+## Active Workflows
 
-Describe the workflow goal in one or two sentences.
+- None yet.
 
-## Completed
+## Recently Closed
 
-- No workflow steps have been completed yet.
+- None yet.
 
-## Current Step
+## Cross-Workflow Notes
 
-No active step.
+- None.
 
 ## Next Step
 
-Choose a workflow:
+Choose a workflow and create a sibling state file:
 
 - greenfield initialization
 - brownfield migration
+- roadmap planning
 - feature work
+- methodology upgrade
 
 ## Open Questions
 
@@ -55,7 +54,8 @@ Choose a workflow:
 ## Relevant Artifacts
 
 - `signal-docs/doc-index.md`
+- `signal-docs/workflow-state/current.md`
 
 ## Resume Instructions
 
-Read `signal-docs/doc-index.md`, then return to this file to identify the active workflow and next step.
+Read `signal-docs/doc-index.md`, then return to this index. If an active workflow is listed, open its sibling state file before planning or editing.

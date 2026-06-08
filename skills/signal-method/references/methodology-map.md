@@ -14,6 +14,7 @@
 - Put reusable lessons in compound memory.
 - Put workflow behavior in agent guidance and workflow playbooks.
 - Put active or paused workflow progress in workflow state.
+- Keep `workflow-state/current.md` as the workflow-state index; put detailed workflow progress in sibling state files.
 - Put adopted methodology version metadata and docs-root discovery in root `signal-method.json`.
 - Put installed skill target version metadata in `SKILL.md` frontmatter.
 

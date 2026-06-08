@@ -1,6 +1,6 @@
 ---
 name: signal-method
-version: "0.4.1"
+version: "0.5.0"
 description: Bootstrap, upgrade, and maintain project documentation using the Signal Method with canonical docs, workflow state, version metadata, ADRs, and compound memory. Use when setting up this methodology in a new repo, migrating an existing repo, upgrading methodology files, planning or reviewing feature work, or mapping an external workflow into Signal artifacts.
 ---
 
@@ -20,7 +20,7 @@ For a new project:
 
 1. Run `scripts/bootstrap-project.js <target-dir>` to copy the bundled starter files into the target repository.
    Use `--docs-root=docs` if the target project should keep `docs/` instead of the default `signal-docs/`.
-2. Create or update workflow state for initialization.
+2. Create or update a sibling workflow state file for initialization and add it to `workflow-state/current.md`.
 3. Fill out the core docs in this order:
    - `signal-docs/doc-index.md`
    - `signal-docs/system-overview.md`
@@ -36,7 +36,7 @@ For an existing project:
 1. Read `references/workflow-chooser.md` if the route is unclear, then read `references/workflow-map.md`.
 2. Bootstrap the docs into the target repo if they do not exist yet.
 3. Document the current system first, not the historical dream.
-4. Create or update workflow state so migration status survives across sessions.
+4. Create or update a sibling workflow state file so migration status survives across sessions, and add it to `workflow-state/current.md`.
 5. Start using feature specs for new work immediately.
 
 For a methodology upgrade:
@@ -56,6 +56,7 @@ For a methodology upgrade:
 - Put reusable lessons in compound memory.
 - Split files only when retrieval or maintenance improves.
 - Load the minimum relevant context for a task.
+- Keep `workflow-state/current.md` as the workflow-state index; put detailed workflow progress in sibling state files.
 - Update workflow state at the end of every meaningful workflow step.
 - Tell the user the next workflow step before pausing or closing.
 - Apply methodology migrations sequentially; do not infer upgrades from the latest template.
@@ -67,7 +68,7 @@ Read `references/methodology-map.md` for the compact rule set.
 When planning work:
 
 1. Read `signal-docs/doc-index.md` or the project's configured canonical docs root.
-2. Read active workflow state if present.
+2. Read `workflow-state/current.md`, then read the relevant sibling workflow state file if the index names one.
 3. Read `signal-docs/system-overview.md` or the equivalent root path.
 4. Read `signal-docs/product-goals.md` and `signal-docs/roadmap.md` if the task involves big-picture planning, sequencing, phases, iterations, releases, or feature selection.
 5. Read `signal-docs/system-invariants.md` or the equivalent root path.

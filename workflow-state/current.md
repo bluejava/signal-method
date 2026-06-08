@@ -1,17 +1,15 @@
-# Current Workflow State
+# Current Workflow State - Workflow Index
 
 Purpose
-Track the active or most recent Signal workflow so a future session can resume without relying on chat history.
+Route to active Signal workflow state files so a future session can resume without relying on chat history. This file is always an index; detailed workflow progress lives in sibling files in this folder.
 
 Include
 
-- workflow status
-- current step
-- next step
-- completed work
-- blockers or open questions
-- relevant artifacts
-- resume instructions
+- active workflow list
+- links to sibling workflow state files
+- short status and next step for each workflow
+- cross-workflow blockers or coordination notes
+- recently closed workflows when useful for handoff
 
 Exclude
 
@@ -19,64 +17,42 @@ Exclude
 - canonical system truth
 - historical rationale
 - reusable implementation lessons
+- detailed per-workflow progress
 
 Split when
-Use one workflow state file per active feature or migration when multiple workflows are active at the same time.
+Create one sibling workflow state file per active feature, planning effort, upgrade, or migration, even when only one workflow is active.
 
-Status: Complete
-Workflow: build-feature
-Current step: Closed
-Last updated: 2026-05-30
+Status: No active workflows
+Last updated: 2026-06-08
 
-## Goal
+## Active Workflows
 
-Bump Signal Method to version `0.4.1` and record that the workflow chooser patch release does not require a migration.
+- None.
 
-## Completed
+## Recently Closed
 
-- Established context from version metadata, migration policy, validation rules, and the workflow chooser changes.
-- Updated package, repository, template, bundled template, and installed-skill version metadata from `0.4.0` to `0.4.1`.
-- Updated `README.md` and `signal-method.html` to display version `0.4.1`.
-- Added `feature-specs/version-0.4.1.md` to record the patch release scope and no-migration decision.
-- Updated `doc-index.md` so the release note is discoverable.
-- Confirmed the migration policy already allows patch versions to avoid migrations when existing projects do not need doc changes.
-- Verified repository validation with `yarn test`.
+- **Version 0.5.0 workflow-state index release** -> `version-0.5.0.md`
+  - Status: complete; validation passed.
+  - Next step: publish the `0.5.0` methodology update when ready.
 
-## Current Step
+## Cross-Workflow Notes
 
-No active step.
+- None.
 
 ## Next Step
 
-Use the chooser on real ambiguous requests and decide whether review and documentation drift detection should become a standalone native workflow.
+Publish the `0.5.0` methodology update when ready.
 
 ## Open Questions
 
-- Should review and documentation drift detection become a standalone native workflow?
-- Should the methodology include a concrete before-and-after adoption example?
-- Should adoption quality have explicit success signals?
-- Should "marketing-driven development" be documented as a named planning or review loop?
+- None for active workflow routing.
 
 ## Relevant Artifacts
 
-- `package.json`
-- `signal-method.json`
-- `template-project/signal-method.json`
-- `skills/signal-method/assets/template-project/signal-method.json`
-- `feature-specs/version-0.4.1.md`
-- `workflows/choose-workflow.md`
-- `skills/signal-method/references/workflow-chooser.md`
-- `feature-specs/workflow-chooser.md`
-- `skills/signal-method/SKILL.md`
-- `skills/signal-method/references/workflow-map.md`
-- `METHODOLOGY.md`
-- `GETTING-STARTED.md`
-- `signal-method.html`
 - `doc-index.md`
-- `README.md`
-- `scripts/validate-docs.js`
 - `workflow-state/current.md`
+- `workflow-state/version-0.5.0.md`
 
 ## Resume Instructions
 
-Open future sessions at `/Users/glenn/work/vibe/signal-method`. Read `doc-index.md`, then this file. If continuing this work, exercise `workflows/choose-workflow.md` against ambiguous setup, planning, feature, review, upgrade, and adapter requests, then decide whether any refinements or a standalone review workflow should enter roadmap planning.
+Open future sessions at `/Users/glenn/work/vibe/signal-method`. Read `doc-index.md`, then this index. There are no active workflows; use `workflow-state/version-0.5.0.md` only to audit the closed release workflow.

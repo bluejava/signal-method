@@ -44,18 +44,20 @@ Keep this file at the project root:
 
 - `signal-method.json` as the adopted methodology version and docs root record
 
+Keep `workflow-state/current.md` as the workflow-state index. Put each workflow's detailed state in a sibling file under `workflow-state/`, even when only one workflow is active.
+
 ### 3. Make The Workflow Real
 
 When you are unsure which workflow applies:
 
 1. read `workflows/choose-workflow.md`
 2. classify the request as setup, migration, roadmap planning, feature work, methodology upgrade, review, or adapter compatibility
-3. start or resume the workflow state for the selected route
+3. start or resume the sibling workflow state file for the selected route and update `workflow-state/current.md`
 4. read only the artifacts named by that route
 
 When broad goals need to become buildable work:
 
-1. start or resume workflow state
+1. start or resume a sibling workflow state file and update `workflow-state/current.md`
 2. establish context from the doc index and relevant docs
 3. update product goals
 4. break goals into phases, iterations, releases, or milestones in the roadmap
@@ -65,7 +67,7 @@ When broad goals need to become buildable work:
 
 For each meaningful feature:
 
-1. start or resume workflow state
+1. start or resume a sibling workflow state file and update `workflow-state/current.md`
 2. establish context from the doc index and relevant docs
 3. update or add a feature spec
 4. implement and test
@@ -73,7 +75,7 @@ For each meaningful feature:
 6. add an ADR if a durable decision was made
 7. capture reusable lessons in compound memory
 8. refresh the doc index if navigation changed
-9. close or pause workflow state with resume instructions
+9. close or pause the sibling workflow state file and update `workflow-state/current.md` with resume instructions
 
 ## Recommended Adoption Order
 
@@ -87,7 +89,7 @@ For each meaningful feature:
 4. Sketch `architecture.md`.
 5. Define the first shared entities in `data-model.md`.
 6. Add `doc-index.md`.
-7. Update `workflow-state/current.md`.
+7. Create a sibling workflow state file and update `workflow-state/current.md`.
 8. Add `product-goals.md` and `roadmap.md` when planning needs to span more than one feature.
 9. Begin feature work with `feature-specs/`.
 
@@ -97,7 +99,7 @@ For each meaningful feature:
 2. Describe the current system, not the historical dream.
 3. Reverse-engineer architecture and data model from the codebase.
 4. Capture the most important existing decisions as ADRs.
-5. Track migration progress in `workflow-state/current.md`.
+5. Track migration progress in a sibling workflow state file and update `workflow-state/current.md`.
 6. Start using feature specs for new work immediately.
 
 ## Practical Rules
@@ -126,7 +128,7 @@ The short version:
 4. preserve project-specific docs
 5. validate the docs
 6. update `signal-method.json`
-7. record the upgrade in workflow state
+7. record the upgrade in a sibling workflow state file and update `workflow-state/current.md`
 
 ## First Dogfooding Goal
 

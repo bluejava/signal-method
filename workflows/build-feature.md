@@ -12,10 +12,10 @@ Each step has a user outcome and agent actions. The user outcome is what should 
 
 1. Start or resume the feature workflow.
    - User outcome: the feature goal, status, and next step are explicit.
-   - Agent actions: create or update a workflow state file for the feature and read any existing resume instructions.
+   - Agent actions: create or update a sibling workflow state file for the feature, update `workflow-state/current.md` with an index entry for it, and read any existing resume instructions.
 2. Establish context.
    - User outcome: the agent understands relevant project constraints before planning or editing.
-   - Agent actions: read `signal-docs/doc-index.md` or the configured docs root, the active workflow state, and only the relevant canonical docs, ADRs, feature specs, and compound-memory notes.
+   - Agent actions: read `signal-docs/doc-index.md` or the configured docs root, `workflow-state/current.md`, the feature's sibling state file, and only the relevant canonical docs, ADRs, feature specs, and compound-memory notes.
 3. Clarify the feature intent.
    - User outcome: the requested behavior and boundaries are clear enough to specify.
    - Agent actions: identify open questions, assumptions, affected users, affected system areas, and likely risks.
@@ -45,7 +45,7 @@ Each step has a user outcome and agent actions. The user outcome is what should 
    - Agent actions: add a compound-memory note only if the work produced a reusable lesson.
 12. Close or pause the workflow.
    - User outcome: the current state and next step are clear to a future session.
-   - Agent actions: update workflow state with completed steps, remaining work, blockers, and resume instructions.
+   - Agent actions: update the feature's detailed workflow state with completed steps, remaining work, blockers, and resume instructions, then update its `workflow-state/current.md` index entry.
 
 ## Required Questions
 

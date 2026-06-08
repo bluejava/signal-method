@@ -408,7 +408,18 @@ Must not contain:
 - reusable implementation lessons that belong in compound memory
 
 Split when:
-Use one state file per active workflow when multiple features or migrations are in progress. Keep a small `current.md` only when the project needs a single obvious entry point.
+Keep `workflow-state/current.md` as the stable entry point and workflow-state index. Put detailed progress for every meaningful feature, planning effort, upgrade, or migration in a sibling file under `workflow-state/`, even when only one workflow is active.
+
+The index should contain only enough detail to route a future session:
+
+- purpose and last-updated date
+- each active workflow name
+- link to each workflow state file
+- short status and next step for each workflow
+- cross-workflow blockers or coordination notes
+- recently closed workflows when useful for handoff
+
+Detailed per-workflow status, rationale, feature behavior, and reusable lessons should remain in the linked workflow state file, feature spec, ADR, or compound-memory note.
 
 ## `signal-method.json`
 

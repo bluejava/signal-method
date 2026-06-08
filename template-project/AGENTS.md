@@ -15,4 +15,4 @@ Use it for:
 
 Do not load it for narrow unrelated tasks that do not touch the methodology or project docs.
 
-At the end of every meaningful Signal workflow step, update the active workflow state and tell the user the next step.
+At the end of every meaningful Signal workflow step, update the relevant sibling workflow state file, update `workflow-state/current.md`, and tell the user the next step.

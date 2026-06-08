@@ -4,7 +4,9 @@
 
 Select the correct Signal workflow before planning, editing, reviewing, or upgrading a project.
 
-This chooser is a routing artifact. It does not replace workflow state and does not create a second state machine. After choosing a route, start or resume the relevant workflow state and follow that workflow's playbook.
+This chooser is a routing artifact. It does not replace workflow state and does not create a second state machine. After choosing a route, start or resume the relevant sibling workflow state file, update `workflow-state/current.md`, and follow that workflow's playbook.
+
+Always read `workflow-state/current.md` first when workflow state exists. Use its index entries to choose the relevant sibling state file before loading deeper context.
 
 ## Step Model
 
@@ -25,13 +27,13 @@ Each route has a user outcome and agent actions. The user outcome is what should
 
 | User request shape | Route | First artifacts to read | Expected output |
 | --- | --- | --- | --- |
-| "Set up Signal here" in a new project | Greenfield initialization | repo shape, `signal-method.json` if present, existing docs conventions | starter docs, configured docs root, workflow state |
+| "Set up Signal here" in a new project | Greenfield initialization | repo shape, `signal-method.json` if present, existing docs conventions | starter docs, configured docs root, workflow-state index and sibling state file |
 | "Add Signal to this codebase" | Brownfield migration | repo shape, existing docs, code structure, `signal-method.json` if present | current-truth docs, migration state, high-value ADR candidates |
-| "What should we build next?" | Roadmap planning | doc index, workflow state, `product-goals.md`, `roadmap.md`, relevant canonical docs | updated goals, sequenced slices, feature candidates |
-| "Build/change this feature" | Feature work | doc index, workflow state, relevant canonical docs, feature spec if present | feature spec, implementation, tests, doc reconciliation |
-| "Upgrade Signal Method" | Methodology upgrade | `signal-method.json`, installed skill version, migration guides, active workflow state | sequential migrations, validation, updated version metadata |
-| "Review this for drift" | Feature review path | workflow state, feature spec, invariants, architecture, data/API/design docs | findings, required doc updates, ADR or compound-memory assessment |
-| "Use compound phases" | Compound adapter | `adapters/compound/phase-mapping.md`, active Signal workflow state, relevant canonical docs | mapped phase outputs without competing workflow state |
+| "What should we build next?" | Roadmap planning | doc index, workflow-state index, sibling state file, `product-goals.md`, `roadmap.md`, relevant canonical docs | updated goals, sequenced slices, feature candidates |
+| "Build/change this feature" | Feature work | doc index, workflow-state index, sibling state file, relevant canonical docs, feature spec if present | feature spec, implementation, tests, doc reconciliation |
+| "Upgrade Signal Method" | Methodology upgrade | `signal-method.json`, installed skill version, migration guides, workflow-state index, sibling state file | sequential migrations, validation, updated version metadata |
+| "Review this for drift" | Feature review path | workflow-state index, sibling state file, feature spec, invariants, architecture, data/API/design docs | findings, required doc updates, ADR or compound-memory assessment |
+| "Use compound phases" | Compound adapter | `adapters/compound/phase-mapping.md`, workflow-state index, sibling state file, relevant canonical docs | mapped phase outputs without competing workflow state |
 
 ## Route Details
 
@@ -41,7 +43,7 @@ User outcome:
 The project has the smallest useful Signal documentation system and one clear next workflow.
 
 Agent actions:
-Classify the project as new, choose the docs root, bootstrap starter docs, fill the core canonical docs, populate `doc-index.md`, and close workflow state with the next feature or planning step.
+Classify the project as new, choose the docs root, bootstrap starter docs, fill the core canonical docs, populate `doc-index.md`, and close the initialization state file plus index entry with the next feature or planning step.
 
 ### Brownfield Migration
 
@@ -65,7 +67,7 @@ User outcome:
 The requested behavior is specified, implemented, verified, and reconciled with project memory.
 
 Agent actions:
-Start or resume workflow state, establish context, clarify intent, create or update the feature spec, implement and test, review against constraints, reconcile docs, and capture ADRs or compound memory when justified.
+Start or resume the sibling workflow state file, update `workflow-state/current.md`, establish context, clarify intent, create or update the feature spec, implement and test, review against constraints, reconcile docs, and capture ADRs or compound memory when justified.
 
 ### Methodology Upgrade
 
@@ -73,7 +75,7 @@ User outcome:
 An adopted project moves from its recorded Signal version to the installed skill's target version without overwriting project-specific truth.
 
 Agent actions:
-Read version metadata, identify required sequential migrations, apply migrations in order, validate, update `signal-method.json`, and close workflow state.
+Read version metadata, identify required sequential migrations, apply migrations in order, validate, update `signal-method.json`, and close the upgrade state file plus index entry.
 
 ### Review And Drift Detection
 
@@ -81,7 +83,7 @@ User outcome:
 The user knows whether delivered behavior and project memory still agree.
 
 Agent actions:
-Check invariant drift, architecture drift, data model drift, API drift, design drift, ADR need, and compound-memory value. Record findings and required updates in workflow state.
+Check invariant drift, architecture drift, data model drift, API drift, design drift, ADR need, and compound-memory value. Record findings and required updates in the sibling workflow state file and index entry.
 
 Review is currently a route through feature work and adapter guidance. If review becomes a frequent standalone entry point, add a native review workflow.
 
@@ -100,7 +102,7 @@ Before choosing a workflow, answer only the questions needed to route safely:
 - Is this a new project, existing project, planning request, implementation request, review request, or methodology upgrade?
 - Does the project already have `signal-method.json`?
 - What docs root is configured or implied?
-- Is there active workflow state that should resume instead of starting a new workflow?
+- Is there active workflow state that should resume instead of starting a new workflow, and which sibling state file does `current.md` point to?
 - Is an external workflow system being adapted, or is Signal operating alone?
 
 ## Exit Criteria
@@ -109,6 +111,5 @@ A workflow has been chosen when:
 
 - the route is named
 - the first artifacts to read are clear
-- workflow state has been started or resumed when the task is meaningful
+- a sibling workflow state file has been started or resumed and indexed when the task is meaningful
 - the user knows the next Signal workflow step
-

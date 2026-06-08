@@ -25,4 +25,4 @@ Use these documents to preserve:
 - decision history
 - reusable implementation knowledge
 - project-specific agent guidance
-- active workflow state for cross-session continuity
+- workflow-state index and sibling state files for cross-session continuity

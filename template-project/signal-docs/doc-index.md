@@ -40,4 +40,4 @@ Usually do not split this file. Keep it concise and central.
 ## Process And Agent Behavior
 
 - `agent-guidance/`: project-specific operational guidance for AI and human contributors.
-- `workflow-state/current.md`: active or most recent workflow state and resume instructions.
+- `workflow-state/current.md`: workflow-state index and resume routing.

@@ -12,7 +12,7 @@ Each step has a user outcome and agent actions. The user outcome is what should 
 
 1. Classify the project as brownfield.
    - User outcome: everyone knows this is a migration of current reality, not greenfield design.
-   - Agent actions: create or update `workflow-state/current.md` with workflow type, goal, current step, and resume instructions.
+   - Agent actions: create or update a sibling workflow state file for migration, update `workflow-state/current.md` with an index entry for it, and record workflow type, goal, current step, and resume instructions.
 2. Choose the canonical docs root.
    - User outcome: the project has one obvious place for Signal docs.
    - Agent actions: create `signal-docs/` unless the project already has an established `docs/` convention worth keeping.
@@ -42,7 +42,7 @@ Each step has a user outcome and agent actions. The user outcome is what should 
    - Agent actions: create or update a feature spec for the next meaningful change.
 11. Close or pause migration.
    - User outcome: it is clear whether migration is done or what remains.
-   - Agent actions: update workflow state with completed steps, remaining gaps, next recommended workflow, and resume instructions.
+   - Agent actions: update the migration state file with completed steps, remaining gaps, next recommended workflow, and resume instructions, then update `workflow-state/current.md`.
 
 ## Migration Strategy
 
@@ -50,7 +50,7 @@ Each step has a user outcome and agent actions. The user outcome is what should 
 - Start with current truth.
 - Let historical reasoning live in ADRs, not in canonical docs.
 - Use feature work to refine the corpus incrementally.
-- Update workflow state at the end of every meaningful step.
+- Update the sibling workflow state file and `workflow-state/current.md` at the end of every meaningful step.
 
 ## Anti-Patterns
 

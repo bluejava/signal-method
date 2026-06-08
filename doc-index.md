@@ -9,7 +9,8 @@ This file is the entry point to the repository.
 - `METHODOLOGY.md`: conceptual model and design principles.
 - `GETTING-STARTED.md`: practical adoption path.
 - `signal-method.json`: adopted methodology version and docs root metadata for this repository.
-- `workflow-state/current.md`: active or most recent workflow state for this repository.
+- `workflow-state/current.md`: workflow-state index for active and recently closed workflows in this repository.
+- `workflow-state/version-0.5.0.md`: detailed release workflow state for the workflow-state index convention and `0.5.0` release.
 - `AGENTS.md`: project-specific agent guidance for working in this repository.
 - `LICENSE`: MIT license terms.
 
@@ -18,11 +19,14 @@ This file is the entry point to the repository.
 - `artifact-taxonomy.md`: formal rules for each artifact type.
 - `feature-specs/signal-method-overview-page.md`: feature intent for the standalone overview page.
 - `feature-specs/version-0.4.1.md`: patch release scope and no-migration decision for version 0.4.1.
+- `feature-specs/version-0.5.0.md`: minor release scope and migration decision for the workflow-state index convention.
+- `feature-specs/workflow-state-index.md`: feature intent for treating `workflow-state/current.md` as a permanent workflow-state index.
 - `feature-specs/workflow-chooser.md`: feature intent for the workflow chooser routing artifact.
 - `migrations/README.md`: rules for methodology version migrations.
 - `migrations/0.1.0-to-0.2.0.md`: migration guide for adding workflow state and version metadata.
 - `migrations/0.2.0-to-0.3.0.md`: migration guide for the breaking rename from Signal Methodology to Signal Method.
 - `migrations/0.3.0-to-0.4.0.md`: migration guide for roadmap planning artifacts and workflow guidance.
+- `migrations/0.4.1-to-0.5.0.md`: migration guide for converting `workflow-state/current.md` into a permanent index.
 - `compound-workflow.md`: legacy compatibility notes for compound-style workflows.
 - `adapters/compound/README.md`: optional adapter guidance for existing compound engineering projects.
 - `skills/signal-method/SKILL.md`: portable skill instructions for applying the methodology in a repo.
@@ -55,7 +59,7 @@ This file is the entry point to the repository.
 - `template-project/signal-docs/feature-specs/example-feature.md`: example feature spec.
 - `template-project/signal-docs/adr/ADR-001-example.md`: example decision record.
 - `template-project/signal-docs/compound-memory/example-pattern.md`: example reusable lesson.
-- `template-project/signal-docs/workflow-state/current.md`: active workflow state and resume instructions.
+- `template-project/signal-docs/workflow-state/current.md`: workflow-state index and resume routing.
 - `template-project/signal-docs/agent-guidance/doc-loading-strategy.md`: minimal loading guidance for AI work.
 - `template-project/signal-docs/agent-guidance/compound-phase-rules.md`: compatibility rules for compound phases.
 - `template-project/compound-spec.local.md`: example local config for compound-oriented tooling.

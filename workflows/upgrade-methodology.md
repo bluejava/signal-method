@@ -12,7 +12,7 @@ Each step has a user outcome and agent actions. The user outcome is what should 
 
 1. Start or resume the upgrade workflow.
    - User outcome: the current project version, target version, and next step are explicit.
-   - Agent actions: read the project's `signal-method.json`, read this skill's `version` frontmatter as the target methodology version, then read the active workflow state from the configured docs root.
+   - Agent actions: read the project's `signal-method.json`, read this skill's `version` frontmatter as the target methodology version, then read `workflow-state/current.md` and the upgrade's sibling state file from the configured docs root.
 2. Locate the project docs root.
    - User outcome: the upgrade applies to the correct documentation tree.
    - Agent actions: use `signal-method.json` when present, otherwise infer the root from `signal-docs/`, `docs/`, or project guidance.
@@ -33,7 +33,7 @@ Each step has a user outcome and agent actions. The user outcome is what should 
    - Agent actions: update `signal-method.json` only after all migrations through the target version are complete.
 8. Close or pause the upgrade workflow.
    - User outcome: the upgrade state is clear to a future session.
-   - Agent actions: update workflow state with completed migrations, remaining work, blockers, and resume instructions.
+   - Agent actions: update the upgrade workflow state with completed migrations, remaining work, blockers, and resume instructions, then update its `workflow-state/current.md` index entry.
 
 ## Rules
 

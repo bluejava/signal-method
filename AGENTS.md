@@ -18,4 +18,4 @@ Do not load it for narrow unrelated tasks that do not touch the methodology or p
 
 The adopted docs root for this repository is `.`. That is intentional because this repository's canonical docs live at the repo root. Generated target projects usually use `signal-docs/`.
 
-At the end of every meaningful Signal workflow step, update `workflow-state/current.md` and tell the user the next step.
+At the end of every meaningful Signal workflow step, update the relevant sibling workflow state file, update `workflow-state/current.md`, and tell the user the next step.

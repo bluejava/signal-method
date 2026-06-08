@@ -1,6 +1,6 @@
 # Signal Method
 
-Current methodology version: `0.4.1`
+Current methodology version: `0.5.0`
 
 This repository captures a standalone methodology for building software with AI as a persistent collaborator instead of a stateless chat tool.
 
