@@ -12,7 +12,7 @@ Each step has a user outcome and agent actions. The user outcome is what should 
 
 1. Classify the project as greenfield.
    - User outcome: everyone knows this is a new project setup, not a migration.
-   - Agent actions: create or update a sibling workflow state file for initialization, update `workflow-state/current.md` with an index entry for it, and record workflow type, goal, current step, and resume instructions.
+   - Agent actions: create or update a sibling workflow state file for initialization, record `Roadmap Alignment` as not applicable unless planning has already started, update `workflow-state/current.md` with an index entry for it, and record workflow type, goal, current step, and resume instructions.
 2. Choose the canonical docs root.
    - User outcome: the project has one obvious place for Signal docs.
    - Agent actions: default to `signal-docs/` unless the project has a strong existing `docs/` convention.

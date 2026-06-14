@@ -23,7 +23,7 @@ Split when
 Create one sibling workflow state file per active feature, planning effort, upgrade, or migration, even when only one workflow is active.
 
 Status: No active workflows
-Last updated: 2026-06-08
+Last updated: 2026-06-14
 
 ## Active Workflows
 
@@ -33,7 +33,11 @@ Last updated: 2026-06-08
 
 - **Version 0.5.0 workflow-state index release** -> `version-0.5.0.md`
   - Status: complete; validation passed.
-  - Next step: publish the `0.5.0` methodology update when ready.
+  - Next step: superseded by the `0.6.0` roadmap alignment release.
+- **Version 0.6.0 roadmap alignment release** -> `version-0.6.0.md`
+  - Status: complete; validation passed.
+  - Roadmap alignment: roadmap gap; this repository has no root roadmap, so the release spec records the decision.
+  - Next step: publish the `0.6.0` methodology update when ready.
 
 ## Cross-Workflow Notes
 
@@ -41,7 +45,7 @@ Last updated: 2026-06-08
 
 ## Next Step
 
-Publish the `0.5.0` methodology update when ready.
+Publish the `0.6.0` methodology update when ready.
 
 ## Open Questions
 
@@ -52,7 +56,8 @@ Publish the `0.5.0` methodology update when ready.
 - `doc-index.md`
 - `workflow-state/current.md`
 - `workflow-state/version-0.5.0.md`
+- `workflow-state/version-0.6.0.md`
 
 ## Resume Instructions
 
-Open future sessions at `/Users/glenn/work/vibe/signal-method`. Read `doc-index.md`, then this index. There are no active workflows; use `workflow-state/version-0.5.0.md` only to audit the closed release workflow.
+Open future sessions at `/Users/glenn/work/vibe/signal-method`. Read `doc-index.md`, then this index. There are no active workflows; use `workflow-state/version-0.6.0.md` only to audit the latest closed release workflow.

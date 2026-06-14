@@ -1,6 +1,6 @@
 ---
 name: signal-method
-version: "0.5.0"
+version: "0.6.0"
 description: Bootstrap, upgrade, and maintain project documentation using the Signal Method with canonical docs, workflow state, version metadata, ADRs, and compound memory. Use when setting up this methodology in a new repo, migrating an existing repo, upgrading methodology files, planning or reviewing feature work, or mapping an external workflow into Signal artifacts.
 ---
 
@@ -57,6 +57,7 @@ For a methodology upgrade:
 - Split files only when retrieval or maintenance improves.
 - Load the minimum relevant context for a task.
 - Keep `workflow-state/current.md` as the workflow-state index; put detailed workflow progress in sibling state files.
+- Record roadmap alignment or an explicit not-applicable note in each meaningful sibling workflow state file.
 - Update workflow state at the end of every meaningful workflow step.
 - Tell the user the next workflow step before pausing or closing.
 - Apply methodology migrations sequentially; do not infer upgrades from the latest template.

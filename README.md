@@ -1,6 +1,6 @@
 # Signal Method
 
-Current methodology version: `0.5.0`
+Current methodology version: `0.6.0`
 
 This repository captures a standalone methodology for building software with AI as a persistent collaborator instead of a stateless chat tool.
 
@@ -102,5 +102,6 @@ This methodology overlaps with several existing approaches, but it optimizes for
 - Use `signal-docs/` as the default folder for Signal-related project files.
 - Copy `template-project/signal-docs/` into a project repo when you are ready to dogfood it.
 - Use `workflows/plan-roadmap.md` when broad goals need to become phases and feature specs before implementation.
+- Record roadmap alignment in sibling workflow state files so active work names the phase, feature candidate, enabling work, roadmap gap, maintenance reason, or not-applicable status it represents.
 - If a project already has an established `docs/` convention, keep that path only when changing it would add more confusion than value.
 - The installed skill is self-contained and carries its own bundled project template plus an `AGENTS.md` routing snippet.

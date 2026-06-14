@@ -394,6 +394,7 @@ Must contain:
 - workflow type
 - current status
 - current step
+- roadmap alignment or an explicit not-applicable note
 - completed steps
 - next step
 - blockers or open questions
@@ -416,10 +417,13 @@ The index should contain only enough detail to route a future session:
 - each active workflow name
 - link to each workflow state file
 - short status and next step for each workflow
+- short roadmap alignment for each active workflow when relevant
 - cross-workflow blockers or coordination notes
 - recently closed workflows when useful for handoff
 
 Detailed per-workflow status, rationale, feature behavior, and reusable lessons should remain in the linked workflow state file, feature spec, ADR, or compound-memory note.
+
+Sibling workflow state files should include a `Roadmap Alignment` section. The section should explain whether the workflow advances a roadmap phase, implements a feature candidate, enables roadmap work, exposes a roadmap gap, handles maintenance, or is not applicable. If the workflow does not align to an existing roadmap item, the state file should say whether `roadmap.md` needs an update before the workflow closes.
 
 ## `signal-method.json`
 

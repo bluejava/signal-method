@@ -34,21 +34,21 @@ If the task route is unclear, read `workflow-chooser.md` before using this map.
 
 ## Roadmap Planning
 
-1. Start or resume a sibling workflow state file for the planning effort and add it to `workflow-state/current.md`.
+1. Start or resume a sibling workflow state file for the planning effort, record `Roadmap Alignment`, and add it to `workflow-state/current.md`.
 2. Read the doc index, workflow-state index, relevant sibling workflow state, product goals, roadmap, and minimum relevant canonical docs.
 3. Create or update `product-goals.md` with current direction, target users, desired outcomes, priorities, non-goals, success signals, and constraints.
 4. Choose the planning horizon and unit: phase, iteration, release, milestone, or another project-specific unit.
 5. Break goals into sequenced slices with outcomes, feature candidates, dependencies, risks, and exit criteria.
 6. Promote selected feature candidates into `feature-specs/`.
-7. Close or pause the planning state file and update `workflow-state/current.md` with the next planning step or the next `build-feature` handoff.
+7. Close or pause the planning state file and update `workflow-state/current.md` with the next planning step or the next `build-feature` handoff. If planning exposes a roadmap gap, update `roadmap.md` before closing or record why it should remain unchanged.
 
 ## Feature Work
 
-1. Start or resume a sibling workflow state file for the feature and add it to `workflow-state/current.md`.
+1. Start or resume a sibling workflow state file for the feature, record `Roadmap Alignment`, and add it to `workflow-state/current.md`.
 2. Read the doc index and the minimum relevant canonical docs.
 3. Update or create the feature spec.
 4. Implement and test.
-5. Update canonical docs if system truth changed.
+5. Update canonical docs and roadmap if system truth or planning structure changed.
 6. Add an ADR if a durable decision was made.
 7. Add a compound-memory note if a reusable lesson emerged.
 8. Close or pause the feature state file and update `workflow-state/current.md` with clear next-step guidance.
@@ -69,12 +69,15 @@ At the end of every meaningful step, update the active workflow state with:
 
 - completed steps
 - current step
+- roadmap alignment or an explicit not-applicable note
 - next step
 - blockers or open questions
 - docs and code areas touched
 - resume instructions
 
 Keep `workflow-state/current.md` as the index, not the detailed workflow state. Every active workflow should have a sibling state file under `workflow-state/`; update both the index entry and the detailed file when workflow status changes.
+
+Every meaningful sibling workflow state file should include a `Roadmap Alignment` section. Use it to identify the roadmap phase, feature candidate, enabling work, roadmap gap, maintenance reason, or not-applicable status. If work falls outside the current roadmap, update `roadmap.md` before closing the workflow or record why the roadmap should stay unchanged.
 
 ## External Workflow Adapters
 

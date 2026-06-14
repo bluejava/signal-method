@@ -46,6 +46,8 @@ Keep this file at the project root:
 
 Keep `workflow-state/current.md` as the workflow-state index. Put each workflow's detailed state in a sibling file under `workflow-state/`, even when only one workflow is active.
 
+Each sibling workflow state file should include `Roadmap Alignment`. Use it to name the roadmap phase, feature candidate, enabling work, roadmap gap, maintenance reason, or explicit not-applicable status for the workflow. If the workflow exposes missing roadmap structure, update `roadmap.md` before closing the workflow or record why no roadmap change is needed.
+
 ### 3. Make The Workflow Real
 
 When you are unsure which workflow applies:

@@ -83,6 +83,8 @@ Signal supports big-picture planning as a first-class workflow. Product directio
 
 The roadmap planning workflow turns broad goals into delivery slices, then promotes selected slices into feature specs that can enter the build-feature workflow. This keeps strategy, sequencing, and implementation detail at different retrieval boundaries without forcing teams into one release vocabulary.
 
+Every meaningful workflow should make its relationship to the roadmap explicit in its sibling workflow state file. Roadmap alignment is required; roadmap containment is not. A workflow can advance a phase, implement a feature candidate, enable later roadmap work, expose a gap in the roadmap, handle maintenance, or be explicitly not applicable. If work falls outside the current roadmap, the workflow should either update `roadmap.md` before closing or record why the roadmap should remain unchanged.
+
 ### User Outcomes And Agent Actions
 
 Workflow steps should distinguish between user-visible outcomes and agent operations.

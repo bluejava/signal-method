@@ -8,6 +8,7 @@ Include
 - active workflow list
 - links to sibling workflow state files
 - short status and next step for each workflow
+- short roadmap alignment for each active workflow when relevant
 - cross-workflow blockers or coordination notes
 - recently closed workflows when useful for handoff
 
@@ -46,6 +47,8 @@ Choose a workflow and create a sibling state file:
 - roadmap planning
 - feature work
 - methodology upgrade
+
+Each sibling state file should include `Roadmap Alignment` with a roadmap phase, feature candidate, enabling work, roadmap gap, maintenance reason, or explicit not-applicable status.
 
 ## Open Questions
 

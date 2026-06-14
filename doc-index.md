@@ -11,6 +11,7 @@ This file is the entry point to the repository.
 - `signal-method.json`: adopted methodology version and docs root metadata for this repository.
 - `workflow-state/current.md`: workflow-state index for active and recently closed workflows in this repository.
 - `workflow-state/version-0.5.0.md`: detailed release workflow state for the workflow-state index convention and `0.5.0` release.
+- `workflow-state/version-0.6.0.md`: detailed release workflow state for the roadmap alignment convention and `0.6.0` release.
 - `AGENTS.md`: project-specific agent guidance for working in this repository.
 - `LICENSE`: MIT license terms.
 
@@ -20,6 +21,8 @@ This file is the entry point to the repository.
 - `feature-specs/signal-method-overview-page.md`: feature intent for the standalone overview page.
 - `feature-specs/version-0.4.1.md`: patch release scope and no-migration decision for version 0.4.1.
 - `feature-specs/version-0.5.0.md`: minor release scope and migration decision for the workflow-state index convention.
+- `feature-specs/version-0.6.0.md`: minor release scope and migration decision for roadmap alignment in workflow state.
+- `feature-specs/roadmap-alignment.md`: feature intent for explicit workflow-to-roadmap traceability.
 - `feature-specs/workflow-state-index.md`: feature intent for treating `workflow-state/current.md` as a permanent workflow-state index.
 - `feature-specs/workflow-chooser.md`: feature intent for the workflow chooser routing artifact.
 - `migrations/README.md`: rules for methodology version migrations.
@@ -27,6 +30,7 @@ This file is the entry point to the repository.
 - `migrations/0.2.0-to-0.3.0.md`: migration guide for the breaking rename from Signal Methodology to Signal Method.
 - `migrations/0.3.0-to-0.4.0.md`: migration guide for roadmap planning artifacts and workflow guidance.
 - `migrations/0.4.1-to-0.5.0.md`: migration guide for converting `workflow-state/current.md` into a permanent index.
+- `migrations/0.5.0-to-0.6.0.md`: migration guide for adding roadmap alignment to sibling workflow state files.
 - `compound-workflow.md`: legacy compatibility notes for compound-style workflows.
 - `adapters/compound/README.md`: optional adapter guidance for existing compound engineering projects.
 - `skills/signal-method/SKILL.md`: portable skill instructions for applying the methodology in a repo.

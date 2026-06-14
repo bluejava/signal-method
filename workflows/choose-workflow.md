@@ -30,7 +30,7 @@ Each route has a user outcome and agent actions. The user outcome is what should
 | "Set up Signal here" in a new project | Greenfield initialization | repo shape, `signal-method.json` if present, existing docs conventions | starter docs, configured docs root, workflow-state index and sibling state file |
 | "Add Signal to this codebase" | Brownfield migration | repo shape, existing docs, code structure, `signal-method.json` if present | current-truth docs, migration state, high-value ADR candidates |
 | "What should we build next?" | Roadmap planning | doc index, workflow-state index, sibling state file, `product-goals.md`, `roadmap.md`, relevant canonical docs | updated goals, sequenced slices, feature candidates |
-| "Build/change this feature" | Feature work | doc index, workflow-state index, sibling state file, relevant canonical docs, feature spec if present | feature spec, implementation, tests, doc reconciliation |
+| "Build/change this feature" | Feature work | doc index, workflow-state index, sibling state file, relevant canonical docs, feature spec if present | feature spec, roadmap alignment, implementation, tests, doc reconciliation |
 | "Upgrade Signal Method" | Methodology upgrade | `signal-method.json`, installed skill version, migration guides, workflow-state index, sibling state file | sequential migrations, validation, updated version metadata |
 | "Review this for drift" | Feature review path | workflow-state index, sibling state file, feature spec, invariants, architecture, data/API/design docs | findings, required doc updates, ADR or compound-memory assessment |
 | "Use compound phases" | Compound adapter | `adapters/compound/phase-mapping.md`, workflow-state index, sibling state file, relevant canonical docs | mapped phase outputs without competing workflow state |
@@ -67,7 +67,7 @@ User outcome:
 The requested behavior is specified, implemented, verified, and reconciled with project memory.
 
 Agent actions:
-Start or resume the sibling workflow state file, update `workflow-state/current.md`, establish context, clarify intent, create or update the feature spec, implement and test, review against constraints, reconcile docs, and capture ADRs or compound memory when justified.
+Start or resume the sibling workflow state file, record `Roadmap Alignment`, update `workflow-state/current.md`, establish context, clarify intent, create or update the feature spec, implement and test, review against constraints, reconcile docs, and capture ADRs or compound memory when justified.
 
 ### Methodology Upgrade
 

@@ -22,3 +22,4 @@ This directory contains sequential migration guides for upgrading Signal-enabled
 - `0.2.0-to-0.3.0.md`: rename Signal Methodology to Signal Method.
 - `0.3.0-to-0.4.0.md`: add roadmap planning artifacts and workflow guidance.
 - `0.4.1-to-0.5.0.md`: make `workflow-state/current.md` a permanent workflow-state index.
+- `0.5.0-to-0.6.0.md`: add roadmap alignment to sibling workflow state files.

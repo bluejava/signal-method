@@ -62,3 +62,5 @@ Load the minimum set of documents that constrain the task. Do not load broad unr
 At the end of every meaningful workflow step, update the active workflow state with completed work, the current step, the next step, blockers, and resume instructions.
 
 Keep `signal-docs/workflow-state/current.md` as the index. Every meaningful workflow should have a sibling state file; update both the index entry and the detailed state file when the workflow changes.
+
+Each sibling workflow state file should include `Roadmap Alignment`. Record the roadmap phase, feature candidate, enabling work, roadmap gap, maintenance reason, or explicit not-applicable status.
