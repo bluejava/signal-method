@@ -1,6 +1,6 @@
 ---
 name: signal-method
-version: "0.6.0"
+version: "0.7.0"
 description: Bootstrap, upgrade, and maintain project documentation using the Signal Method with canonical docs, workflow state, version metadata, ADRs, and compound memory. Use when setting up this methodology in a new repo, migrating an existing repo, upgrading methodology files, planning or reviewing feature work, or mapping an external workflow into Signal artifacts.
 ---
 
@@ -21,15 +21,16 @@ For a new project:
 1. Run `scripts/bootstrap-project.js <target-dir>` to copy the bundled starter files into the target repository.
    Use `--docs-root=docs` if the target project should keep `docs/` instead of the default `signal-docs/`.
 2. Create or update a sibling workflow state file for initialization and add it to `workflow-state/current.md`.
-3. Fill out the core docs in this order:
+3. Generate `signal-docs/project-dashboard.html` when a human-facing orientation snapshot is useful.
+4. Fill out the core docs in this order:
    - `signal-docs/doc-index.md`
    - `signal-docs/system-overview.md`
    - `signal-docs/system-invariants.md`
    - `signal-docs/architecture.md`
    - `signal-docs/data-model.md`
    If planning spans multiple features, fill `signal-docs/product-goals.md` and then `signal-docs/roadmap.md`.
-4. Let the bootstrap step add the methodology routing block to `AGENTS.md`.
-5. Add feature specs, ADRs, and compound-memory notes as the project earns them.
+5. Let the bootstrap step add the methodology routing block to `AGENTS.md`.
+6. Add feature specs, ADRs, and compound-memory notes as the project earns them.
 
 For an existing project:
 
@@ -58,6 +59,7 @@ For a methodology upgrade:
 - Load the minimum relevant context for a task.
 - Keep `workflow-state/current.md` as the workflow-state index; put detailed workflow progress in sibling state files.
 - Record roadmap alignment or an explicit not-applicable note in each meaningful sibling workflow state file.
+- Treat `project-dashboard.html` as a generated human-orientation artifact, not canonical truth.
 - Update workflow state at the end of every meaningful workflow step.
 - Tell the user the next workflow step before pausing or closing.
 - Apply methodology migrations sequentially; do not infer upgrades from the latest template.
@@ -103,6 +105,7 @@ Do not maintain a competing state machine. Map external phases into Signal workf
 ## Resources
 
 - `scripts/bootstrap-project.js`: copy the bundled methodology starter files into a target repository and manage the `AGENTS.md` routing block.
+- `scripts/generate-dashboard.js`: generate a static human-orientation dashboard from a Signal-enabled project.
 - `references/methodology-map.md`: compact summary of the artifact model and design rules.
 - `references/workflow-chooser.md`: routing guide for selecting the correct Signal workflow or adapter path.
 - `references/workflow-map.md`: concise operational playbook for setup, migration, roadmap planning, feature work, workflow state, and optional adapters.

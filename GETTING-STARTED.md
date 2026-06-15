@@ -29,6 +29,7 @@ Start with these files under your canonical docs root. New projects should defau
 - `signal-docs/data-model.md`
 - `signal-docs/doc-index.md`
 - `signal-docs/workflow-state/current.md`
+- `signal-docs/project-dashboard.html` as a generated human-orientation snapshot
 
 Then add:
 
@@ -77,7 +78,8 @@ For each meaningful feature:
 6. add an ADR if a durable decision was made
 7. capture reusable lessons in compound memory
 8. refresh the doc index if navigation changed
-9. close or pause the sibling workflow state file and update `workflow-state/current.md` with resume instructions
+9. regenerate `project-dashboard.html` when a human-facing status snapshot should stay current
+10. close or pause the sibling workflow state file and update `workflow-state/current.md` with resume instructions
 
 ## Recommended Adoption Order
 
@@ -92,8 +94,9 @@ For each meaningful feature:
 5. Define the first shared entities in `data-model.md`.
 6. Add `doc-index.md`.
 7. Create a sibling workflow state file and update `workflow-state/current.md`.
-8. Add `product-goals.md` and `roadmap.md` when planning needs to span more than one feature.
-9. Begin feature work with `feature-specs/`.
+8. Generate `project-dashboard.html` when a human needs a fast project status overview.
+9. Add `product-goals.md` and `roadmap.md` when planning needs to span more than one feature.
+10. Begin feature work with `feature-specs/`.
 
 ### Existing Project
 

@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>template-project - Signal Project Dashboard</title>
+  <style>
+    :root {
+      --paper: #f7f1e7;
+      --paper-deep: #e8dccb;
+      --ink: #26231f;
+      --muted: #6f675c;
+      --line: #cabba6;
+      --panel: #fffaf1;
+      --green: #386653;
+      --brick: #9e4c3f;
+      --gold: #b78b2c;
+      --blue: #335f7d;
+      --shadow: 0 18px 50px rgba(73, 55, 36, 0.16);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background:
+        linear-gradient(90deg, rgba(38, 35, 31, 0.04) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(38, 35, 31, 0.035) 1px, transparent 1px),
+        var(--paper);
+      background-size: 28px 28px;
+      color: var(--ink);
+      font-family: Aptos, "Segoe UI", sans-serif;
+      line-height: 1.5;
+    }
+
+    a {
+      color: var(--blue);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    .page {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 40px 24px 56px;
+    }
+
+    header {
+      display: grid;
+      grid-template-columns: minmax(0, 1.45fr) minmax(280px, 0.55fr);
+      gap: 28px;
+      align-items: stretch;
+      margin-bottom: 28px;
+    }
+
+    .hero,
+    .stamp,
+    .panel,
+    .workflow-card {
+      background: rgba(255, 250, 241, 0.94);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+    }
+
+    .hero {
+      padding: 34px;
+      border-left: 8px solid var(--green);
+    }
+
+    .eyebrow,
+    .card-kicker {
+      color: var(--brick);
+      font-size: 0.76rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    h1,
+    h2,
+    h3 {
+      margin: 0;
+      font-family: "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+      font-weight: 700;
+      letter-spacing: 0;
+    }
+
+    h1 {
+      max-width: 840px;
+      margin-top: 10px;
+      font-size: clamp(2.4rem, 6vw, 5.2rem);
+      line-height: 0.94;
+    }
+
+    .hero p {
+      max-width: 720px;
+      margin: 22px 0 0;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    .stamp {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 24px;
+      border-top: 8px solid var(--gold);
+    }
+
+    .stamp dl,
+    .workflow-card dl {
+      display: grid;
+      gap: 14px;
+      margin: 0;
+    }
+
+    dt {
+      color: var(--muted);
+      font-size: 0.75rem;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    dd {
+      margin: 3px 0 0;
+      font-weight: 700;
+      overflow-wrap: anywhere;
+    }
+
+    main {
+      display: grid;
+      gap: 20px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 20px;
+    }
+
+    .panel {
+      padding: 22px;
+      border-radius: 6px;
+    }
+
+    .wide {
+      grid-column: span 8;
+    }
+
+    .narrow {
+      grid-column: span 4;
+    }
+
+    .full {
+      grid-column: 1 / -1;
+    }
+
+    .panel h2 {
+      margin-bottom: 14px;
+      font-size: 1.45rem;
+    }
+
+    .panel h3,
+    .workflow-card h3 {
+      margin-top: 6px;
+      font-size: 1.2rem;
+    }
+
+    .workflow-card h4 {
+      margin: 18px 0 8px;
+      color: var(--green);
+      font-size: 0.82rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .summary-text p,
+    .workflow-card p {
+      margin: 0 0 10px;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 1.2rem;
+    }
+
+    li + li {
+      margin-top: 7px;
+    }
+
+    code {
+      background: rgba(183, 139, 44, 0.16);
+      border: 1px solid rgba(183, 139, 44, 0.24);
+      border-radius: 4px;
+      padding: 0.05rem 0.28rem;
+      font-size: 0.9em;
+    }
+
+    .file-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 10px;
+      padding: 0;
+      list-style: none;
+    }
+
+    .file-list li {
+      min-height: 52px;
+      margin: 0;
+      padding: 11px 12px;
+      border: 1px solid var(--line);
+      border-left-width: 5px;
+      background: rgba(255, 255, 255, 0.48);
+    }
+
+    .file-list li.present {
+      border-left-color: var(--green);
+    }
+
+    .file-list li.missing {
+      border-left-color: var(--brick);
+      opacity: 0.78;
+    }
+
+    .file-list span {
+      display: block;
+      margin-top: 3px;
+      color: var(--muted);
+      font-size: 0.78rem;
+    }
+
+    .workflow-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 16px;
+    }
+
+    .workflow-card {
+      padding: 20px;
+      border-radius: 6px;
+      box-shadow: none;
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .source-note {
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 820px) {
+      .page {
+        padding: 22px 14px 36px;
+      }
+
+      header,
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .wide,
+      .narrow,
+      .full {
+        grid-column: auto;
+      }
+
+      .hero {
+        padding: 26px;
+      }
+    }
+
+    @media print {
+      body {
+        background: white;
+      }
+
+      .page {
+        max-width: none;
+      }
+
+      .hero,
+      .stamp,
+      .panel,
+      .workflow-card {
+        box-shadow: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <section class="hero">
+        <div class="eyebrow">Signal Project Dashboard</div>
+        <h1>template-project</h1>
+        <p>This is a generated orientation snapshot. The markdown artifacts remain the source of truth; use the links here to inspect or update the underlying Signal docs.</p>
+      </section>
+      <aside class="stamp">
+        <dl>
+          <div><dt>Methodology</dt><dd>signal-method 0.7.0</dd></div>
+          <div><dt>Docs root</dt><dd>signal-docs</dd></div>
+          <div><dt>Workflow status</dt><dd>Not started</dd></div>
+          <div><dt>Last updated</dt><dd>YYYY-MM-DD</dd></div>
+          <div><dt>Generated</dt><dd>2026-06-15T05:35:52.781Z</dd></div>
+        </dl>
+      </aside>
+    </header>
+
+    <main>
+      <section class="grid">
+        <article class="panel wide">
+          <div class="card-kicker">Current Focus</div>
+          <h2>Active Workflows</h2>
+          <div class="summary-text"><ul>
+<li>None yet.</li>
+</ul></div>
+        </article>
+        <article class="panel narrow">
+          <div class="card-kicker">Resume Point</div>
+          <h2>Next Step</h2>
+          <div class="summary-text"><p>Choose a workflow and create a sibling state file:</p>
+<ul>
+<li>greenfield initialization</li>
+<li>brownfield migration</li>
+<li>roadmap planning</li>
+<li>feature work</li>
+<li>methodology upgrade</li>
+</ul></div>
+        </article>
+      </section>
+
+      <section class="panel full">
+        <div class="card-kicker">Workflow Detail</div>
+        <h2>Roadmap Alignment And Handoffs</h2>
+        <div class="workflow-grid"><p class="muted">No sibling workflow state files found.</p></div>
+      </section>
+
+      <section class="grid">
+        <article class="panel wide">
+          <div class="card-kicker">Canonical Docs</div>
+          <h2>Orientation Map</h2>
+          <ul class="file-list"><li class="present"><a href="system-overview.md">System overview</a></li><li class="present"><a href="product-goals.md">Product goals</a></li><li class="present"><a href="roadmap.md">Roadmap</a></li><li class="present"><a href="system-invariants.md">System invariants</a></li><li class="present"><a href="architecture.md">Architecture</a></li><li class="present"><a href="data-model.md">Data model</a></li><li class="present"><a href="api.md">API</a></li><li class="present"><a href="design/design-guidelines.md">Design guidelines</a></li><li class="present"><a href="doc-index.md">Documentation index</a></li><li class="present"><a href="workflow-state/current.md">Workflow index</a></li></ul>
+        </article>
+        <article class="panel narrow">
+          <div class="card-kicker">Questions</div>
+          <h2>Open Questions</h2>
+          <div class="summary-text"><ul>
+<li>None yet.</li>
+</ul></div>
+        </article>
+      </section>
+
+      <section class="grid">
+        <article class="panel wide">
+          <div class="card-kicker">Feature Work</div>
+          <h2>Feature Specs</h2>
+          <ul class="file-list"><li class="present"><a href="feature-specs/example-feature.md">Example Feature</a></li></ul>
+        </article>
+        <article class="panel narrow">
+          <div class="card-kicker">Decisions</div>
+          <h2>ADRs</h2>
+          <ul class="file-list"><li class="present"><a href="adr/ADR-001-example.md">ADR-001 Example Decision</a></li></ul>
+        </article>
+      </section>
+
+      <section class="grid">
+        <article class="panel wide">
+          <div class="card-kicker">Recently Closed</div>
+          <h2>Closed Workflow Notes</h2>
+          <div class="summary-text"><ul>
+<li>None yet.</li>
+</ul></div>
+        </article>
+        <article class="panel narrow">
+          <div class="card-kicker">Reusable Knowledge</div>
+          <h2>Compound Memory</h2>
+          <ul class="file-list"><li class="present"><a href="compound-memory/example-pattern.md">Example Pattern</a></li></ul>
+        </article>
+      </section>
+
+      <section class="panel full">
+        <div class="card-kicker">Source Files</div>
+        <h2>Traceability</h2>
+        <ul class="file-list"><li class="present"><a href="../signal-method.json">Signal manifest</a></li><li class="present"><a href="doc-index.md">Documentation index</a></li><li class="present"><a href="workflow-state/current.md">Workflow index</a></li></ul>
+        <p class="source-note">Regenerate with the Signal Method skill script, <code>node &lt;skill-root&gt;/scripts/generate-dashboard.js &lt;project-root&gt;</code>. If this project vendors the source script, <code>node scripts/generate-dashboard.js .</code> also works.</p>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

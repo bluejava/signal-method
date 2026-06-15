@@ -77,6 +77,12 @@ The playbook tells humans and agents what the path is. The workflow-state index 
 
 At the end of every meaningful workflow step, the agent should update the sibling workflow state file, update the workflow-state index, and tell the user the next step. This makes the process durable across chat sessions instead of relying on conversation memory.
 
+### Human Project Dashboard
+
+Signal projects can include a generated `project-dashboard.html` in the configured docs root. The dashboard is a human orientation artifact: it summarizes the adopted methodology version, docs root, active workflow state, next step, roadmap alignment, open questions, feature specs, ADRs, and source links.
+
+The dashboard is derived from existing Signal artifacts. It is not canonical truth and should not replace `doc-index.md`, workflow state, feature specs, ADRs, or roadmap documents. Regenerate it when a human asks for a status overview, at the end of a meaningful workflow step when freshness matters, or during review if orientation artifacts appear stale.
+
 ### Planning From Goals To Features
 
 Signal supports big-picture planning as a first-class workflow. Product direction belongs in `product-goals.md`. Sequencing across phases, iterations, releases, or milestones belongs in `roadmap.md`. Buildable behavior belongs in `feature-specs/`.

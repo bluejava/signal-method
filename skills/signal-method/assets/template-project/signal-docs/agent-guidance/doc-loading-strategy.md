@@ -30,6 +30,8 @@ Operational guidance grows into multiple distinct workflows.
 8. relevant ADRs
 9. relevant compound-memory notes
 
+For a human status check, open `signal-docs/project-dashboard.html` first, then follow its source links to the markdown truth.
+
 ## Task-Specific Additions
 
 ### UI Work
@@ -64,3 +66,5 @@ At the end of every meaningful workflow step, update the active workflow state w
 Keep `signal-docs/workflow-state/current.md` as the index. Every meaningful workflow should have a sibling state file; update both the index entry and the detailed state file when the workflow changes.
 
 Each sibling workflow state file should include `Roadmap Alignment`. Record the roadmap phase, feature candidate, enabling work, roadmap gap, maintenance reason, or explicit not-applicable status.
+
+Regenerate `signal-docs/project-dashboard.html` from the Signal Method dashboard generator when a fresh human-facing status snapshot is useful.

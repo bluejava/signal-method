@@ -12,6 +12,7 @@ This file is the entry point to the repository.
 - `workflow-state/current.md`: workflow-state index for active and recently closed workflows in this repository.
 - `workflow-state/version-0.5.0.md`: detailed release workflow state for the workflow-state index convention and `0.5.0` release.
 - `workflow-state/version-0.6.0.md`: detailed release workflow state for the roadmap alignment convention and `0.6.0` release.
+- `workflow-state/version-0.7.0.md`: detailed release workflow state for the project dashboard convention and `0.7.0` release.
 - `AGENTS.md`: project-specific agent guidance for working in this repository.
 - `LICENSE`: MIT license terms.
 
@@ -22,7 +23,9 @@ This file is the entry point to the repository.
 - `feature-specs/version-0.4.1.md`: patch release scope and no-migration decision for version 0.4.1.
 - `feature-specs/version-0.5.0.md`: minor release scope and migration decision for the workflow-state index convention.
 - `feature-specs/version-0.6.0.md`: minor release scope and migration decision for roadmap alignment in workflow state.
+- `feature-specs/version-0.7.0.md`: minor release scope and migration decision for the generated project dashboard.
 - `feature-specs/roadmap-alignment.md`: feature intent for explicit workflow-to-roadmap traceability.
+- `feature-specs/project-dashboard.md`: feature intent for the generated human-orientation dashboard.
 - `feature-specs/workflow-state-index.md`: feature intent for treating `workflow-state/current.md` as a permanent workflow-state index.
 - `feature-specs/workflow-chooser.md`: feature intent for the workflow chooser routing artifact.
 - `migrations/README.md`: rules for methodology version migrations.
@@ -31,10 +34,12 @@ This file is the entry point to the repository.
 - `migrations/0.3.0-to-0.4.0.md`: migration guide for roadmap planning artifacts and workflow guidance.
 - `migrations/0.4.1-to-0.5.0.md`: migration guide for converting `workflow-state/current.md` into a permanent index.
 - `migrations/0.5.0-to-0.6.0.md`: migration guide for adding roadmap alignment to sibling workflow state files.
+- `migrations/0.6.0-to-0.7.0.md`: migration guide for adding the generated project dashboard.
 - `compound-workflow.md`: legacy compatibility notes for compound-style workflows.
 - `adapters/compound/README.md`: optional adapter guidance for existing compound engineering projects.
 - `skills/signal-method/SKILL.md`: portable skill instructions for applying the methodology in a repo.
 - `skills/signal-method/references/workflow-chooser.md`: portable workflow routing guide for installed agents.
+- `skills/signal-method/scripts/generate-dashboard.js`: portable dashboard generator for adopted projects.
 - `skills/signal-method/assets/template-project/`: bundled template used by the installed skill bootstrap.
 - `doc-index.md`: this map.
 
@@ -52,6 +57,7 @@ This file is the entry point to the repository.
 - `template-project/signal-docs/README.md`: orientation for the project-level docs folder.
 - `template-project/signal-method.json`: adopted methodology version and docs root metadata.
 - `template-project/signal-docs/doc-index.md`: entry point for the project-level documentation graph.
+- `template-project/signal-docs/project-dashboard.html`: generated starter dashboard for a Signal-enabled project.
 - `template-project/signal-docs/system-overview.md`: conceptual system model.
 - `template-project/signal-docs/product-goals.md`: product direction and planning constraints.
 - `template-project/signal-docs/roadmap.md`: phases, iterations, releases, or milestones with feature candidates.

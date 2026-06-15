@@ -87,6 +87,8 @@ Check invariant drift, architecture drift, data model drift, API drift, design d
 
 Review is currently a route through feature work and adapter guidance. If review becomes a frequent standalone entry point, add a native review workflow.
 
+For quick human orientation, use `project-dashboard.html` as a generated entry point, then follow its links back to the markdown artifacts. Do not treat the dashboard as a separate workflow or source of truth.
+
 ### Compound Adapter
 
 User outcome:

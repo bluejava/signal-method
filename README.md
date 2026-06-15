@@ -1,6 +1,6 @@
 # Signal Method
 
-Current methodology version: `0.6.0`
+Current methodology version: `0.7.0`
 
 This repository captures a standalone methodology for building software with AI as a persistent collaborator instead of a stateless chat tool.
 
@@ -69,6 +69,7 @@ the portable skill package starts at `skills/signal-method/`.
 - `workflows/`: operational playbooks for new projects, migrations, roadmap planning, feature work, and methodology upgrades.
 - `migrations/`: sequential guides for upgrading existing Signal-enabled projects.
 - `template-project/`: a starter project scaffold with self-describing templates.
+- `scripts/generate-dashboard.js`: dependency-free generator for a local Signal project dashboard.
 - `LICENSE`: MIT license terms.
 
 ## Design Principles

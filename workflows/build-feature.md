@@ -43,7 +43,10 @@ Each step has a user outcome and agent actions. The user outcome is what should 
 11. Capture reusable knowledge.
    - User outcome: lessons that should help future work are durable.
    - Agent actions: add a compound-memory note only if the work produced a reusable lesson.
-12. Close or pause the workflow.
+12. Refresh human orientation when useful.
+   - User outcome: a returning human can quickly see project status.
+   - Agent actions: regenerate `project-dashboard.html` when the workflow changed status, next steps, roadmap alignment, open questions, or source links in a way that would make the dashboard stale.
+13. Close or pause the workflow.
    - User outcome: the current state and next step are clear to a future session.
    - Agent actions: update the feature's detailed workflow state with completed steps, roadmap alignment, remaining work, blockers, and resume instructions, then update its `workflow-state/current.md` index entry.
 
@@ -66,6 +69,7 @@ A feature is complete when:
 - the behavior exists in code
 - tests cover it appropriately
 - the relevant docs reflect reality
+- the generated dashboard is refreshed when human-facing status changed materially
 - workflow state records roadmap alignment and any roadmap update decision
 - important decisions are preserved
 - reusable knowledge is not left trapped in chat or commit history

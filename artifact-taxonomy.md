@@ -479,3 +479,35 @@ Must not contain:
 
 Split when:
 Usually it should not split; keep it concise and central.
+
+## `project-dashboard.html`
+
+Purpose:
+Provide a generated, human-readable status overview for a Signal-enabled project.
+
+When consulted:
+
+- returning to a project after time away
+- onboarding a human author or reviewer
+- checking active workflow state and next steps
+- finding source docs quickly without reading the full documentation graph
+
+Must contain:
+
+- adopted methodology version and docs root
+- workflow index status and next step
+- links to active or recent sibling workflow state files
+- roadmap alignment and open questions when recorded
+- key canonical docs and whether they exist
+- feature specs, ADRs, compound-memory notes, and source links
+- generated timestamp
+
+Must not contain:
+
+- canonical system truth that is not present in source docs
+- manually edited status narrative as the only record of progress
+- AI-generated interpretation without source links
+- behavior or decisions that belong in feature specs, roadmap docs, or ADRs
+
+Split when:
+Usually do not split. If a project needs a richer dashboard, keep `project-dashboard.html` as the entry point and link to more specialized generated views.

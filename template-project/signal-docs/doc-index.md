@@ -41,3 +41,4 @@ Usually do not split this file. Keep it concise and central.
 
 - `agent-guidance/`: project-specific operational guidance for AI and human contributors.
 - `workflow-state/current.md`: workflow-state index and resume routing.
+- `project-dashboard.html`: generated human-orientation snapshot derived from Signal docs.

@@ -20,9 +20,12 @@ const requiredFiles = [
   "migrations/0.3.0-to-0.4.0.md",
   "migrations/0.4.1-to-0.5.0.md",
   "migrations/0.5.0-to-0.6.0.md",
+  "migrations/0.6.0-to-0.7.0.md",
   "feature-specs/version-0.5.0.md",
   "feature-specs/version-0.6.0.md",
+  "feature-specs/version-0.7.0.md",
   "feature-specs/roadmap-alignment.md",
+  "feature-specs/project-dashboard.md",
   "feature-specs/workflow-state-index.md",
   "adapters/compound/README.md",
   "adapters/compound/phase-mapping.md",
@@ -33,6 +36,7 @@ const requiredFiles = [
   "skills/signal-method/SKILL.md",
   "skills/signal-method/agents/openai.yaml",
   "skills/signal-method/references/workflow-chooser.md",
+  "skills/signal-method/scripts/generate-dashboard.js",
   "skills/signal-method/assets/template-project/AGENTS.md",
   "skills/signal-method/assets/template-project/compound-spec.local.md",
   "skills/signal-method/assets/template-project/signal-method.json",
@@ -42,8 +46,10 @@ const requiredFiles = [
   "skills/signal-method/migrations/0.3.0-to-0.4.0.md",
   "skills/signal-method/migrations/0.4.1-to-0.5.0.md",
   "skills/signal-method/migrations/0.5.0-to-0.6.0.md",
+  "skills/signal-method/migrations/0.6.0-to-0.7.0.md",
   "skills/signal-method/assets/template-project/signal-docs/README.md",
   "skills/signal-method/assets/template-project/signal-docs/doc-index.md",
+  "skills/signal-method/assets/template-project/signal-docs/project-dashboard.html",
   "skills/signal-method/assets/template-project/signal-docs/system-overview.md",
   "skills/signal-method/assets/template-project/signal-docs/product-goals.md",
   "skills/signal-method/assets/template-project/signal-docs/roadmap.md",
@@ -73,6 +79,7 @@ const requiredFiles = [
   "template-project/signal-method.json",
   "template-project/signal-docs/README.md",
   "template-project/signal-docs/doc-index.md",
+  "template-project/signal-docs/project-dashboard.html",
   "template-project/signal-docs/system-overview.md",
   "template-project/signal-docs/product-goals.md",
   "template-project/signal-docs/roadmap.md",
@@ -87,7 +94,8 @@ const requiredFiles = [
   "template-project/signal-docs/workflow-state/current.md",
   "template-project/signal-docs/agent-guidance/doc-loading-strategy.md",
   "template-project/signal-docs/agent-guidance/compound-phase-rules.md",
-  "scripts/suggest-doc-updates.js"
+  "scripts/suggest-doc-updates.js",
+  "scripts/generate-dashboard.js"
 ];
 
 const templateFiles = [
@@ -106,6 +114,17 @@ const templateFiles = [
   "template-project/signal-docs/workflow-state/current.md",
   "template-project/signal-docs/agent-guidance/doc-loading-strategy.md",
   "template-project/signal-docs/agent-guidance/compound-phase-rules.md"
+];
+
+const mirroredFiles = [
+  [
+    "scripts/generate-dashboard.js",
+    "skills/signal-method/scripts/generate-dashboard.js"
+  ],
+  [
+    "template-project/signal-docs/project-dashboard.html",
+    "skills/signal-method/assets/template-project/signal-docs/project-dashboard.html"
+  ]
 ];
 
 /**
@@ -219,6 +238,20 @@ function validateVersionMetadata() {
 }
 
 /**
+ * Validate that source and bundled copies that should remain identical have not drifted.
+ *
+ * @returns {string[]}
+ */
+function validateMirroredFiles() {
+  return mirroredFiles
+    .filter(
+      ([sourcePath, bundledPath]) =>
+        fileExists(sourcePath) && fileExists(bundledPath) && readFile(sourcePath) !== readFile(bundledPath)
+    )
+    .map(([sourcePath, bundledPath]) => `Mirrored file mismatch: ${sourcePath} differs from ${bundledPath}`);
+}
+
+/**
  * Run all repo validations and return any failures.
  *
  * @returns {string[]}
@@ -227,7 +260,8 @@ function runValidation() {
   return []
     .concat(validateRequiredFiles())
     .concat(validateTemplateHeadings())
-    .concat(validateVersionMetadata());
+    .concat(validateVersionMetadata())
+    .concat(validateMirroredFiles());
 }
 
 const failures = runValidation();

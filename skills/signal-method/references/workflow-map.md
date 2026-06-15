@@ -51,7 +51,8 @@ If the task route is unclear, read `workflow-chooser.md` before using this map.
 5. Update canonical docs and roadmap if system truth or planning structure changed.
 6. Add an ADR if a durable decision was made.
 7. Add a compound-memory note if a reusable lesson emerged.
-8. Close or pause the feature state file and update `workflow-state/current.md` with clear next-step guidance.
+8. Regenerate `project-dashboard.html` when a fresh human-facing status snapshot is useful.
+9. Close or pause the feature state file and update `workflow-state/current.md` with clear next-step guidance.
 
 ## Methodology Upgrade
 
