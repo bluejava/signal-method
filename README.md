@@ -1,6 +1,6 @@
 # Signal Method
 
-Current methodology version: `0.7.0`
+Current methodology version: `0.7.1`
 
 This repository captures a standalone methodology for building software with AI as a persistent collaborator instead of a stateless chat tool.
 
@@ -65,7 +65,7 @@ the portable skill package starts at `skills/signal-method/`.
 - `compound-workflow.md`: legacy compatibility notes for compound-style workflows.
 - `adapters/compound/`: an optional adapter for projects that already use compound engineering.
 - `skills/signal-method/`: a portable skill for applying the methodology.
-- `doc-index.md`: the map of this repository.
+- `signal-docs/`: this repository's live dogfooded Signal context, including `doc-index.md`, feature specs, and workflow state.
 - `workflows/`: operational playbooks for new projects, migrations, roadmap planning, feature work, and methodology upgrades.
 - `migrations/`: sequential guides for upgrading existing Signal-enabled projects.
 - `template-project/`: a starter project scaffold with self-describing templates.

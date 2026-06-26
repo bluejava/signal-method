@@ -1,6 +1,6 @@
 ---
 name: signal-method
-version: "0.7.0"
+version: "0.7.1"
 description: Bootstrap, upgrade, and maintain project documentation using the Signal Method with canonical docs, workflow state, version metadata, ADRs, and compound memory. Use when setting up this methodology in a new repo, migrating an existing repo, upgrading methodology files, planning or reviewing feature work, or mapping an external workflow into Signal artifacts.
 ---
 

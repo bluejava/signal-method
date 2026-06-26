@@ -75,17 +75,17 @@ The output is an HTML file with embedded CSS and no runtime dependencies.
 ## Constraints
 
 - The generator must be dependency-free Node.js.
-- The generator must support the normal `signal-docs/` docs root and this source repository's root docs mode where `docsRoot` is `"."`.
+- The generator must support the normal `signal-docs/` docs root and projects explicitly configured with another docs root.
 - The dashboard must include source links so a reader can jump from summary to canonical artifacts.
 - Missing optional docs should be displayed as missing, not treated as generation failures.
 
 ## Roadmap Alignment
 
 - Alignment type: roadmap gap
-- Roadmap link: none; this repository has no root `roadmap.md` yet
-- Product goal link: none; this repository has no root `product-goals.md` yet
+- Roadmap link: none; this repository has no `signal-docs/roadmap.md` yet
+- Product goal link: none; this repository has no `signal-docs/product-goals.md` yet
 - How this workflow advances or affects the roadmap: closes a human-orientation gap discovered while dogfooding Signal Method
-- Roadmap update needed before close: no; this source repository still has no root roadmap, and the feature spec records the gap
+- Roadmap update needed before close: no; this source repository still has no dogfooded roadmap, and the feature spec records the gap
 
 ## Acceptance Criteria
 

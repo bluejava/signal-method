@@ -9,9 +9,11 @@ const requiredFiles = [
   "GETTING-STARTED.md",
   "artifact-taxonomy.md",
   "compound-workflow.md",
-  "doc-index.md",
   "signal-method.json",
-  "workflow-state/current.md",
+  "signal-docs/doc-index.md",
+  "signal-docs/workflow-state/current.md",
+  "signal-docs/workflow-state/docs-root-normalization.md",
+  "signal-docs/workflow-state/version-0.7.1.md",
   "AGENTS.md",
   "package.json",
   "migrations/README.md",
@@ -21,12 +23,16 @@ const requiredFiles = [
   "migrations/0.4.1-to-0.5.0.md",
   "migrations/0.5.0-to-0.6.0.md",
   "migrations/0.6.0-to-0.7.0.md",
-  "feature-specs/version-0.5.0.md",
-  "feature-specs/version-0.6.0.md",
-  "feature-specs/version-0.7.0.md",
-  "feature-specs/roadmap-alignment.md",
-  "feature-specs/project-dashboard.md",
-  "feature-specs/workflow-state-index.md",
+  "signal-docs/feature-specs/signal-method-overview-page.md",
+  "signal-docs/feature-specs/version-0.4.1.md",
+  "signal-docs/feature-specs/version-0.5.0.md",
+  "signal-docs/feature-specs/version-0.6.0.md",
+  "signal-docs/feature-specs/version-0.7.0.md",
+  "signal-docs/feature-specs/version-0.7.1.md",
+  "signal-docs/feature-specs/roadmap-alignment.md",
+  "signal-docs/feature-specs/project-dashboard.md",
+  "signal-docs/feature-specs/workflow-chooser.md",
+  "signal-docs/feature-specs/workflow-state-index.md",
   "adapters/compound/README.md",
   "adapters/compound/phase-mapping.md",
   "adapters/compound/plan.md",
@@ -238,6 +244,26 @@ function validateVersionMetadata() {
 }
 
 /**
+ * Validate docs-root metadata for this source repo and bundled starter projects.
+ *
+ * @returns {string[]}
+ */
+function validateDocsRootMetadata() {
+  const docsRootSources = [
+    ["signal-method.json", readJson("signal-method.json").docsRoot],
+    ["template-project/signal-method.json", readJson("template-project/signal-method.json").docsRoot],
+    [
+      "skills/signal-method/assets/template-project/signal-method.json",
+      readJson("skills/signal-method/assets/template-project/signal-method.json").docsRoot
+    ]
+  ];
+
+  return docsRootSources
+    .filter(([, docsRoot]) => docsRoot !== "signal-docs")
+    .map(([relativePath, docsRoot]) => `Docs root mismatch in ${relativePath}: expected signal-docs, found ${docsRoot}`);
+}
+
+/**
  * Validate that source and bundled copies that should remain identical have not drifted.
  *
  * @returns {string[]}
@@ -261,6 +287,7 @@ function runValidation() {
     .concat(validateRequiredFiles())
     .concat(validateTemplateHeadings())
     .concat(validateVersionMetadata())
+    .concat(validateDocsRootMetadata())
     .concat(validateMirroredFiles());
 }
 
